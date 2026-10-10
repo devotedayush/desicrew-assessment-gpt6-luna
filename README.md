@@ -4,6 +4,12 @@ A Streamlit app with three assessment workflows: ask questions about an Excel in
 
 This version is based on the submitted original. **GPT-6 Luna replaces the existing LLM calls in Q1 and Q2; Q3 processing is unchanged and stays local.** The submitted-original folder is preserved separately and must not be edited.
 
+## Supplied assessment files for testing
+
+Alongside the synthetic demos, this repository includes the **original supplied workbook and all ten target document images** in [data/assessment/](data/assessment/README.md), as requested. File bytes are unchanged; the manifest records the original names and checksums.
+
+Upload `data/assessment/question-1/Inventory-Records-Sample-Data.xlsx` for Q1, or the images in `data/assessment/question-3/` for Q3. For Q3, turn off the synthetic-fixture checkbox and enable the existing supplied-layout region option. See the [input guide](data/assessment/README.md) for exact steps and known extraction limits.
+
 ## Working screenshots
 
 Actual browser captures using demonstration data. The Q1 image below comes from the successful live GPT-6 Luna test; Q2 shows local cited retrieval, and Q3 shows the synthetic ten-document review demonstration. These screenshots do not claim accurate handwriting extraction from the supplied scans.
@@ -46,7 +52,7 @@ pip check
 streamlit run app.py --server.address 127.0.0.1 --server.port 8501
 ```
 
-Open **http://127.0.0.1:8501**. The repository is public. API keys and supplied private inputs are not bundled.
+Open **http://127.0.0.1:8501**. The repository is public. API keys are not bundled. Supplied assessment test inputs are available in `data/assessment/`.
 
 ### Enable GPT-6 Luna
 
@@ -110,7 +116,7 @@ python scripts/evaluate_support.py
 python scripts/demo_inventory.py
 ```
 
-Run the full suite on Linux. Native macOS failures in sandbox execution are expected. Fictional KB documents and synthetic workbooks/images are bundled for demonstration. The actual assessment workbook, identity scans, private extraction outputs and visual reviews are excluded from Git.
+Run the full suite on Linux. Native macOS failures in sandbox execution are expected. Fictional KB documents and synthetic workbooks/images are bundled for demonstration. The user-requested original assessment workbook and ten document images are also available in [data/assessment/](data/assessment/README.md). Private extraction outputs, visual reviews and API keys remain excluded from Git.
 
 ## Repository layout
 
@@ -121,7 +127,8 @@ scripts/               Demonstrations, evaluations and packaging
 tests/                 Automated checks
 docs/kb/               Fictional support knowledge base
 data/synthetic/        Demonstration workbook and documents
+data/assessment/       Supplied workbook and ten original assessment images
 artifacts/             Selected historical synthetic/aggregate evidence
 ```
 
-Keep API keys, uploaded workbooks, identity images and generated private outputs out of source control. Local `outputs/`, `data/private/`, `artifacts/private/`, `reviewer_outputs/` and `review_appendix/` are excluded.
+The supplied assessment inputs in `data/assessment/` were explicitly requested for this public repository. Keep API keys, other uploaded workbooks/identity images and generated private outputs out of source control. Local `outputs/`, `data/private/`, `artifacts/private/`, `reviewer_outputs/` and `review_appendix/` are excluded.

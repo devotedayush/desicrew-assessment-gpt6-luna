@@ -1,0 +1,76 @@
+{
+  "purpose": "Original assessment inputs explicitly requested by the user for public repository testing; file bytes unchanged, image filenames clarified",
+  "files": [
+    {
+      "original_file": "Question 3/ID.png",
+      "repository_file": "data/assessment/question-3/pan-card.png",
+      "sha256": "8779b7e5afe1b11a29ce237ae53bccb2cdec84e2d4b64e1e3f534ba81c818004",
+      "bytes": 2415944
+    },
+    {
+      "original_file": "Question 3/Aadhar.png",
+      "repository_file": "data/assessment/question-3/aadhaar-card.png",
+      "sha256": "d6154fc334b0b3e18e952d6d1f023f9e20d7cb4da48353b7b4a6418a38b5e505",
+      "bytes": 578578
+    },
+    {
+      "original_file": "Question 3/ChatGPT Image May 2, 2026, 03_43_11 PM.png",
+      "repository_file": "data/assessment/question-3/driving-licence.png",
+      "sha256": "e91631cea96986be0b7d311d2dd7d7ff25369406f320bffeacda1e3b4a1521d4",
+      "bytes": 2487710
+    },
+    {
+      "original_file": "Question 3/ChatGPT Image May 2, 2026, 03_52_54 PM.png",
+      "repository_file": "data/assessment/question-3/passport.png",
+      "sha256": "2d6f90790a85de7046c911fb104f08e9ddef5099a748f51d154107cd2adeb97c",
+      "bytes": 2882451
+    },
+    {
+      "original_file": "Question 3/Fatca.jpeg",
+      "repository_file": "data/assessment/question-3/fatca.jpeg",
+      "sha256": "b3fe159e383553100ee383c2d3b56503c5af88e89de972d88ad6a02e8c73d547",
+      "bytes": 454046
+    },
+    {
+      "original_file": "Question 3/suitability.jpeg",
+      "repository_file": "data/assessment/question-3/suitability.jpeg",
+      "sha256": "42535751fc3acfb230fcbf6bf3cf9319f9d11af6f9a62411f2453eb0e5e97d03",
+      "bytes": 180369
+    },
+    {
+      "original_file": "Question 3/split.jpeg",
+      "repository_file": "data/assessment/question-3/multiple-policies-consent.jpeg",
+      "sha256": "88b502a715f23184ef1906049b00dabbdf13256f69d2ca7761ebb2fa3a9e83bc",
+      "bytes": 151244
+    },
+    {
+      "original_file": "Question 3/Moral.jpeg",
+      "repository_file": "data/assessment/question-3/moral-hazard.jpeg",
+      "sha256": "9513220d578a7fd655d89c689b7f67e223fe210b0910f3a324f779bea5e38c8a",
+      "bytes": 375852
+    },
+    {
+      "original_file": "Question 3/ECS.jpeg",
+      "repository_file": "data/assessment/question-3/nach-ecs.jpeg",
+      "sha256": "e4b81b19ccb4d8c851bef26c69025c83cd42154c28cafd32fbac21356d693bd1",
+      "bytes": 555182
+    },
+    {
+      "original_file": "Question 3/Illustration.jpeg",
+      "repository_file": "data/assessment/question-3/benefit-illustration.jpeg",
+      "sha256": "fe4af9a446035f9d09876e11c6e839e153f66155d02d2e7af2bf37ed220fd6e9",
+      "bytes": 238578
+    },
+    {
+      "original_file": "Question 1/Inventory-Records-Sample-Data.xlsx",
+      "repository_file": "data/assessment/question-1/Inventory-Records-Sample-Data.xlsx",
+      "sha256": "2440c4eb79e402c282295c53ecc5510bb92fc769fac66787955300c598f3e6a6",
+      "bytes": 12052
+    }
+  ],
+  "not_included": [
+    "Question 3/Assignment Ashok.pdf",
+    "Question 3/Proposal Ashok.pdf"
+  ],
+  "exclusion_reason": "Additional PDFs outside the ten requested document image types"
+}
