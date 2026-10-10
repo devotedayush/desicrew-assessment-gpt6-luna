@@ -4,6 +4,24 @@ A Streamlit app with three assessment workflows: ask questions about an Excel in
 
 This version is based on the submitted original. **GPT-6 Luna replaces the existing LLM calls in Q1 and Q2; Q3 processing is unchanged and stays local.** The submitted-original folder is preserved separately and must not be edited.
 
+## Working screenshots
+
+Actual browser captures using demonstration data. The Q1 image below comes from the successful live GPT-6 Luna test; Q2 shows local cited retrieval, and Q3 shows the synthetic ten-document review demonstration. These screenshots do not claim accurate handwriting extraction from the supplied scans.
+
+### Q1 — GPT-6 Luna answer, generated code and executed result
+
+![Q1 live GPT-6 Luna inventory result](artifacts/screenshots/version-1/q1-gpt6-luna.jpg)
+
+### Q2 — Support answer with document-section evidence
+
+![Q2 cited support answer](artifacts/screenshots/version-1/q2-cited-answer.jpg)
+
+### Q3 — Document extraction and review flags
+
+![Q3 ten-document synthetic review](artifacts/screenshots/version-1/q3-ten-document-review.jpg)
+
+See the [complete eight-screenshot gallery](docs/SCREENSHOTS_VERSION_1.md) for public search, repeat handling, image input, extracted fields and download controls. Capture context and checksums are recorded in [CAPTURE_MANIFEST.json](artifacts/screenshots/version-1/CAPTURE_MANIFEST.json).
+
 ## What the app does
 
 | Workflow | Behaviour |
@@ -28,7 +46,7 @@ pip check
 streamlit run app.py --server.address 127.0.0.1 --server.port 8501
 ```
 
-Open **http://127.0.0.1:8501**. The repository is private, so cloning requires access to it.
+Open **http://127.0.0.1:8501**. The repository is public. API keys and supplied private inputs are not bundled.
 
 ### Enable GPT-6 Luna
 

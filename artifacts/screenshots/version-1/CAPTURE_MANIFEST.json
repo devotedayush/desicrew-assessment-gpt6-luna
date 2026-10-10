@@ -1,0 +1,54 @@
+{
+  "capture_date": "2026-10-10",
+  "source": "Actual Version 1 browser at localhost:8517, Linux VM",
+  "screenshots": [
+    {
+      "file": "q1-gpt6-luna.jpg",
+      "title": "Q1: live GPT-6 Luna answer, generated code and executed result",
+      "context": "Earlier successful Version 1 browser test, 10 October 2026; synthetic workbook; live GPT-6 Luna",
+      "sha256": "3dde7ec8a18bf6177f191db2b2fa367d1698767d6592b0d805c8d110db59c7d6"
+    },
+    {
+      "file": "q1-public-search.jpg",
+      "title": "Q1: public definition search sources",
+      "context": "Earlier successful Version 1 browser test, 10 October 2026; generic reorder-point query",
+      "sha256": "273bbbc185e92d814bef9f1aadce69c1f3c419a9521c291e853d028e56c77d9b"
+    },
+    {
+      "file": "q1-offline-demo.jpg",
+      "title": "Q1: offline planner demonstration",
+      "context": "Fresh capture, 10 October 2026; synthetic workbook; offline planner, not an LLM call",
+      "sha256": "d2c4c8c84f2c9857b02ea0cbbf1235a7d17b87cf0f66f2dece4e23cfcb56a0c3"
+    },
+    {
+      "file": "q2-cited-answer.jpg",
+      "title": "Q2: answer with a specific KB section and evidence",
+      "context": "Fresh capture, 10 October 2026; fictional MeadowDesk KB; local extractive retrieval",
+      "sha256": "8a7becd849de5d042ddb53fa9b4e18c922918861ec9ef37a0cfa280eada1fe57"
+    },
+    {
+      "file": "q2-repeat-handling.jpg",
+      "title": "Q2: remembered question and repetition handling",
+      "context": "Fresh capture, 10 October 2026; same local support session",
+      "sha256": "8aeaa70e24c3fae327baa8a28934eaa90d7f5001e4eca5c3ce7776f4b2f6a66d"
+    },
+    {
+      "file": "q3-image-source.jpg",
+      "title": "Q3: fictional image uploaded for local OCR",
+      "context": "Fresh capture, 10 October 2026; artificial PAN fixture, not a government document",
+      "sha256": "b809e588107f075f25cdb8076f667d31ae03dd59827b1cb0702755864afcc256"
+    },
+    {
+      "file": "q3-image-extraction.jpg",
+      "title": "Q3: OCR field values, quality scores and JSON/report downloads",
+      "context": "Fresh capture, 10 October 2026; artificial PAN fixture processed by Tesseract",
+      "sha256": "9211744e453ed3b4aa3d5481a5b39559fdef34226e2a8acf93fdbba27811db51"
+    },
+    {
+      "file": "q3-ten-document-review.jpg",
+      "title": "Q3: ten document types, 44 slots and review flags",
+      "context": "Fresh capture, 10 October 2026; ten synthetic text fixtures, not handwriting accuracy",
+      "sha256": "e5db72c5467fbbfc2142fef0b0d6d68d3a57d743eb42c86e359c25305874f72d"
+    }
+  ]
+}
