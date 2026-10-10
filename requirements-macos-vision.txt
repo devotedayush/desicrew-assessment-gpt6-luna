@@ -1,0 +1,4 @@
+# Optional local macOS Vision backend; install in a separate Python 3.12 env.
+# The base app and Linux workflow do not require these packages.
+pyobjc-framework-Vision==12.2.2
+pyobjc-framework-Quartz==12.2.2

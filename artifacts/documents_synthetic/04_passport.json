@@ -1,0 +1,143 @@
+{
+  "source_file": "passport.txt",
+  "document_type": "passport",
+  "document_type_label": "Passport",
+  "classification_confidence": 0.915,
+  "classification_source": "content_rules",
+  "classification_evidence": [
+    {
+      "document_type": "passport",
+      "score": 5,
+      "matched_rules": [
+        "\\bpassport\\b"
+      ]
+    },
+    {
+      "document_type": "aadhaar_card",
+      "score": 0,
+      "matched_rules": []
+    },
+    {
+      "document_type": "pan_card",
+      "score": 0,
+      "matched_rules": []
+    }
+  ],
+  "handwritten": false,
+  "fields": {
+    "passport_number": {
+      "value": "U1234567",
+      "confidence": 0.96,
+      "status": "accepted",
+      "source": {
+        "page": 1,
+        "line": 5,
+        "text": "Passport Number: U1234567",
+        "candidate_text": "U1234567",
+        "method": "label_same_line",
+        "bbox": null,
+        "ocr_confidence": 1.0,
+        "lines": [
+          {
+            "page": 1,
+            "line": 5,
+            "text": "Passport Number: U1234567",
+            "bbox": null,
+            "ocr_confidence": 1.0
+          }
+        ]
+      },
+      "validation_issues": [],
+      "needs_review": false
+    },
+    "date_of_birth": {
+      "value": "1994-03-19",
+      "confidence": 0.96,
+      "status": "accepted",
+      "source": {
+        "page": 1,
+        "line": 6,
+        "text": "Date of Birth: 19/03/1994",
+        "candidate_text": "19/03/1994",
+        "method": "label_same_line",
+        "bbox": null,
+        "ocr_confidence": 1.0,
+        "lines": [
+          {
+            "page": 1,
+            "line": 6,
+            "text": "Date of Birth: 19/03/1994",
+            "bbox": null,
+            "ocr_confidence": 1.0
+          }
+        ]
+      },
+      "validation_issues": [],
+      "needs_review": false
+    },
+    "date_of_expiry": {
+      "value": "2034-03-19",
+      "confidence": 0.96,
+      "status": "accepted",
+      "source": {
+        "page": 1,
+        "line": 7,
+        "text": "Date of Expiry: 19/03/2034",
+        "candidate_text": "19/03/2034",
+        "method": "label_same_line",
+        "bbox": null,
+        "ocr_confidence": 1.0,
+        "lines": [
+          {
+            "page": 1,
+            "line": 7,
+            "text": "Date of Expiry: 19/03/2034",
+            "bbox": null,
+            "ocr_confidence": 1.0
+          }
+        ]
+      },
+      "validation_issues": [],
+      "needs_review": false
+    },
+    "mrz_line_2": {
+      "value": "U1234567<6IND9403198F3403196<<<<<<<<<<<<<<00",
+      "confidence": 0.96,
+      "status": "accepted",
+      "source": {
+        "page": 1,
+        "line": 8,
+        "text": "MRZ Line 2: U1234567<6IND9403198F3403196<<<<<<<<<<<<<<00",
+        "candidate_text": "U1234567<6IND9403198F3403196<<<<<<<<<<<<<<00",
+        "method": "label_same_line",
+        "bbox": null,
+        "ocr_confidence": 1.0,
+        "lines": [
+          {
+            "page": 1,
+            "line": 8,
+            "text": "MRZ Line 2: U1234567<6IND9403198F3403196<<<<<<<<<<<<<<00",
+            "bbox": null,
+            "ocr_confidence": 1.0
+          }
+        ]
+      },
+      "validation_issues": [],
+      "needs_review": false
+    }
+  },
+  "review_threshold": 0.9,
+  "confidence_kind": "heuristic_quality_score_not_probability",
+  "needs_review": false,
+  "review_reasons": [],
+  "ocr": {
+    "engine": "provided_text",
+    "pages": 1,
+    "mean_word_confidence": 1.0,
+    "is_image_ocr": false,
+    "warnings": [
+      "Text-input tests do not measure image OCR or handwriting accuracy"
+    ],
+    "passes": []
+  }
+}

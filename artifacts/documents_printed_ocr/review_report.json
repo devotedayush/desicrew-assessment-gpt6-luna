@@ -1,0 +1,1447 @@
+{
+  "review_threshold": 0.9,
+  "threshold_rationale": "0.90 is the configured heuristic triage threshold for identity and bank data; it is not a calibrated 90% accuracy claim. Unreadable, conflicting, invalid, uncertain checkbox and handwritten fields are reviewed even if a configured threshold is lower. Each field entry preserves the threshold used during its extraction; mixed-threshold results are not rescored. Ground-truth samples are required for calibration.",
+  "document_count": 10,
+  "documents_needing_review": 9,
+  "fields_needing_review": 31,
+  "documents": [
+    {
+      "source_file": "aadhaar_card.png",
+      "document_type": "aadhaar_card",
+      "classification_confidence": 0.915,
+      "reasons": [
+        "aadhaar_number:needs_review"
+      ]
+    },
+    {
+      "source_file": "driving_licence.png",
+      "document_type": "driving_licence",
+      "classification_confidence": 0.915,
+      "reasons": [
+        "dl_number:needs_review"
+      ]
+    },
+    {
+      "source_file": "passport.png",
+      "document_type": "passport",
+      "classification_confidence": 0.915,
+      "reasons": [
+        "mrz_line_2:needs_review"
+      ]
+    },
+    {
+      "source_file": "nach_ecs_mandate.png",
+      "document_type": "nach_ecs_mandate",
+      "classification_confidence": 0.97,
+      "reasons": [
+        "bank_account_number:needs_review",
+        "ifsc_code:needs_review",
+        "bank_name:needs_review",
+        "amount_figures:needs_review",
+        "frequency:needs_review"
+      ]
+    },
+    {
+      "source_file": "fatca_annexure_form.png",
+      "document_type": "fatca_annexure_form",
+      "classification_confidence": 0.962,
+      "reasons": [
+        "policy_number:needs_review",
+        "tin_pan:needs_review",
+        "father_name:needs_review",
+        "place_of_birth:needs_review",
+        "nationality:needs_review"
+      ]
+    },
+    {
+      "source_file": "benefit_illustration_declaration.png",
+      "document_type": "benefit_illustration_declaration",
+      "classification_confidence": 0.97,
+      "reasons": [
+        "application_number:needs_review",
+        "policyholder_name:needs_review",
+        "date:needs_review",
+        "place:needs_review"
+      ]
+    },
+    {
+      "source_file": "moral_hazard_questionnaire.png",
+      "document_type": "moral_hazard_questionnaire",
+      "classification_confidence": 0.97,
+      "reasons": [
+        "application_number:needs_review",
+        "name_of_life_assured:needs_review",
+        "nominee_relationship:needs_review",
+        "date:needs_review",
+        "place:needs_review"
+      ]
+    },
+    {
+      "source_file": "multiple_policies_consent_form.png",
+      "document_type": "multiple_policies_consent_form",
+      "classification_confidence": 0.97,
+      "reasons": [
+        "proposer_name:needs_review",
+        "reason_for_multiple_policies:needs_review",
+        "date:needs_review",
+        "place:needs_review"
+      ]
+    },
+    {
+      "source_file": "suitability_profiler_declaration.png",
+      "document_type": "suitability_profiler_declaration",
+      "classification_confidence": 0.97,
+      "reasons": [
+        "application_number:needs_review",
+        "name_of_life_assured:needs_review",
+        "name_of_agent_sp:needs_review",
+        "date:needs_review",
+        "place:needs_review"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "source_file": "aadhaar_card.png",
+      "document_type": "aadhaar_card",
+      "field": "aadhaar_number",
+      "value": "234567890123",
+      "confidence": 0.88,
+      "threshold": 0.9,
+      "status": "needs_review",
+      "below_threshold": true,
+      "reasons": [
+        "aadhaar_checksum_not_verified",
+        "confidence_below_threshold"
+      ],
+      "source": {
+        "page": 1,
+        "line": 4,
+        "text": "Aadhaar Number: 2345 6789 0123",
+        "candidate_text": "2345 6789 0123",
+        "method": "label_same_line",
+        "bbox": [
+          45,
+          206,
+          461,
+          224
+        ],
+        "ocr_confidence": 0.922,
+        "lines": [
+          {
+            "page": 1,
+            "line": 4,
+            "text": "Aadhaar Number: 2345 6789 0123",
+            "bbox": [
+              45,
+              206,
+              461,
+              224
+            ],
+            "ocr_confidence": 0.922
+          }
+        ]
+      }
+    },
+    {
+      "source_file": "driving_licence.png",
+      "document_type": "driving_licence",
+      "field": "dl_number",
+      "value": "MH12 2012 0000123",
+      "confidence": 0.88,
+      "threshold": 0.9,
+      "status": "needs_review",
+      "below_threshold": true,
+      "reasons": [
+        "dl_format_jurisdiction_not_verified",
+        "confidence_below_threshold"
+      ],
+      "source": {
+        "page": 1,
+        "line": 4,
+        "text": "DL Number: MH12 2012 0000123",
+        "candidate_text": "MH12 2012 0000123",
+        "method": "label_same_line",
+        "bbox": [
+          47,
+          206,
+          446,
+          224
+        ],
+        "ocr_confidence": 0.916,
+        "lines": [
+          {
+            "page": 1,
+            "line": 4,
+            "text": "DL Number: MH12 2012 0000123",
+            "bbox": [
+              47,
+              206,
+              446,
+              224
+            ],
+            "ocr_confidence": 0.916
+          }
+        ]
+      }
+    },
+    {
+      "source_file": "passport.png",
+      "document_type": "passport",
+      "field": "mrz_line_2",
+      "value": "U1234567<6IND9403198F3403196<<<<<<<<<<<<<<00",
+      "confidence": 0.828,
+      "threshold": 0.9,
+      "status": "needs_review",
+      "below_threshold": true,
+      "reasons": [
+        "confidence_below_threshold"
+      ],
+      "source": {
+        "page": 1,
+        "line": 7,
+        "text": "MRZ Line 2: U1234567<6IND9403198F3403196<<<<<<<<<<<<<<00",
+        "candidate_text": "U1234567<6IND9403198F3403196<<<<<<<<<<<<<<00",
+        "method": "label_same_line",
+        "bbox": [
+          47,
+          323,
+          937,
+          341
+        ],
+        "ocr_confidence": 0.828,
+        "lines": [
+          {
+            "page": 1,
+            "line": 7,
+            "text": "MRZ Line 2: U1234567<6IND9403198F3403196<<<<<<<<<<<<<<00",
+            "bbox": [
+              47,
+              323,
+              937,
+              341
+            ],
+            "ocr_confidence": 0.828
+          }
+        ]
+      }
+    },
+    {
+      "source_file": "nach_ecs_mandate.png",
+      "document_type": "nach_ecs_mandate",
+      "field": "bank_account_number",
+      "value": "000123456789",
+      "confidence": 0.65,
+      "threshold": 0.9,
+      "status": "needs_review",
+      "below_threshold": true,
+      "reasons": [
+        "bank_account_not_verified",
+        "handwritten_form_requires_review",
+        "tesseract_handwriting_not_validated",
+        "confidence_below_threshold"
+      ],
+      "source": {
+        "page": 1,
+        "line": 4,
+        "text": "Bank Account Number: 000123456789",
+        "candidate_text": "000123456789",
+        "method": "label_same_line",
+        "bbox": [
+          47,
+          206,
+          511,
+          224
+        ],
+        "ocr_confidence": 0.962,
+        "lines": [
+          {
+            "page": 1,
+            "line": 4,
+            "text": "Bank Account Number: 000123456789",
+            "bbox": [
+              47,
+              206,
+              511,
+              224
+            ],
+            "ocr_confidence": 0.962
+          }
+        ]
+      }
+    },
+    {
+      "source_file": "nach_ecs_mandate.png",
+      "document_type": "nach_ecs_mandate",
+      "field": "ifsc_code",
+      "value": "DEMO0123456",
+      "confidence": 0.65,
+      "threshold": 0.9,
+      "status": "needs_review",
+      "below_threshold": true,
+      "reasons": [
+        "ifsc_directory_not_verified",
+        "handwritten_form_requires_review",
+        "tesseract_handwriting_not_validated",
+        "confidence_below_threshold"
+      ],
+      "source": {
+        "page": 1,
+        "line": 5,
+        "text": "IFSC Code: DEMO0123456",
+        "candidate_text": "DEMO0123456",
+        "method": "label_same_line",
+        "bbox": [
+          47,
+          245,
+          361,
+          263
+        ],
+        "ocr_confidence": 0.872,
+        "lines": [
+          {
+            "page": 1,
+            "line": 5,
+            "text": "IFSC Code: DEMO0123456",
+            "bbox": [
+              47,
+              245,
+              361,
+              263
+            ],
+            "ocr_confidence": 0.872
+          }
+        ]
+      }
+    },
+    {
+      "source_file": "nach_ecs_mandate.png",
+      "document_type": "nach_ecs_mandate",
+      "field": "bank_name",
+      "value": "Example Bank",
+      "confidence": 0.72,
+      "threshold": 0.9,
+      "status": "needs_review",
+      "below_threshold": true,
+      "reasons": [
+        "handwritten_form_requires_review",
+        "tesseract_handwriting_not_validated",
+        "confidence_below_threshold"
+      ],
+      "source": {
+        "page": 1,
+        "line": 6,
+        "text": "Bank Name: Example Bank",
+        "candidate_text": "Example Bank",
+        "method": "label_same_line",
+        "bbox": [
+          47,
+          284,
+          371,
+          307
+        ],
+        "ocr_confidence": 0.962,
+        "lines": [
+          {
+            "page": 1,
+            "line": 6,
+            "text": "Bank Name: Example Bank",
+            "bbox": [
+              47,
+              284,
+              371,
+              307
+            ],
+            "ocr_confidence": 0.962
+          }
+        ]
+      }
+    },
+    {
+      "source_file": "nach_ecs_mandate.png",
+      "document_type": "nach_ecs_mandate",
+      "field": "amount_figures",
+      "value": "25000",
+      "confidence": 0.72,
+      "threshold": 0.9,
+      "status": "needs_review",
+      "below_threshold": true,
+      "reasons": [
+        "currency_assumed_inr",
+        "handwritten_form_requires_review",
+        "tesseract_handwriting_not_validated",
+        "confidence_below_threshold"
+      ],
+      "source": {
+        "page": 1,
+        "line": 7,
+        "text": "Amount (figures): 25,000",
+        "candidate_text": "25,000",
+        "method": "label_same_line",
+        "bbox": [
+          45,
+          323,
+          346,
+          346
+        ],
+        "ocr_confidence": 0.96,
+        "lines": [
+          {
+            "page": 1,
+            "line": 7,
+            "text": "Amount (figures): 25,000",
+            "bbox": [
+              45,
+              323,
+              346,
+              346
+            ],
+            "ocr_confidence": 0.96
+          }
+        ]
+      }
+    },
+    {
+      "source_file": "nach_ecs_mandate.png",
+      "document_type": "nach_ecs_mandate",
+      "field": "frequency",
+      "value": "Monthly",
+      "confidence": 0.72,
+      "threshold": 0.9,
+      "status": "needs_review",
+      "below_threshold": true,
+      "reasons": [
+        "checkbox_selection_requires_visual_review",
+        "handwritten_form_requires_review",
+        "tesseract_handwriting_not_validated",
+        "confidence_below_threshold"
+      ],
+      "source": {
+        "page": 1,
+        "line": 8,
+        "text": "Frequency: [x] Monthly [ ] Quarterly",
+        "candidate_text": "[x] Monthly [ ] Quarterly",
+        "method": "label_same_line",
+        "bbox": [
+          47,
+          362,
+          474,
+          385
+        ],
+        "ocr_confidence": 0.924,
+        "lines": [
+          {
+            "page": 1,
+            "line": 8,
+            "text": "Frequency: [x] Monthly [ ] Quarterly",
+            "bbox": [
+              47,
+              362,
+              474,
+              385
+            ],
+            "ocr_confidence": 0.924
+          }
+        ]
+      }
+    },
+    {
+      "source_file": "fatca_annexure_form.png",
+      "document_type": "fatca_annexure_form",
+      "field": "policy_number",
+      "value": "0000012345",
+      "confidence": 0.72,
+      "threshold": 0.9,
+      "status": "needs_review",
+      "below_threshold": true,
+      "reasons": [
+        "identifier_format_not_verified",
+        "handwritten_form_requires_review",
+        "tesseract_handwriting_not_validated",
+        "confidence_below_threshold"
+      ],
+      "source": {
+        "page": 1,
+        "line": 4,
+        "text": "Policy Number: 0000012345",
+        "candidate_text": "0000012345",
+        "method": "label_same_line",
+        "bbox": [
+          47,
+          206,
+          384,
+          229
+        ],
+        "ocr_confidence": 0.96,
+        "lines": [
+          {
+            "page": 1,
+            "line": 4,
+            "text": "Policy Number: 0000012345",
+            "bbox": [
+              47,
+              206,
+              384,
+              229
+            ],
+            "ocr_confidence": 0.96
+          }
+        ]
+      }
+    },
+    {
+      "source_file": "fatca_annexure_form.png",
+      "document_type": "fatca_annexure_form",
+      "field": "tin_pan",
+      "value": "DEMPP4321Q",
+      "confidence": 0.65,
+      "threshold": 0.9,
+      "status": "needs_review",
+      "below_threshold": true,
+      "reasons": [
+        "handwritten_form_requires_review",
+        "tesseract_handwriting_not_validated",
+        "confidence_below_threshold"
+      ],
+      "source": {
+        "page": 1,
+        "line": 5,
+        "text": "TIN / PAN: DEMPP4321Q",
+        "candidate_text": "DEMPP4321Q",
+        "method": "label_same_line",
+        "bbox": [
+          45,
+          245,
+          333,
+          266
+        ],
+        "ocr_confidence": 0.896,
+        "lines": [
+          {
+            "page": 1,
+            "line": 5,
+            "text": "TIN / PAN: DEMPP4321Q",
+            "bbox": [
+              45,
+              245,
+              333,
+              266
+            ],
+            "ocr_confidence": 0.896
+          }
+        ]
+      }
+    },
+    {
+      "source_file": "fatca_annexure_form.png",
+      "document_type": "fatca_annexure_form",
+      "field": "father_name",
+      "value": "Arun Demo",
+      "confidence": 0.72,
+      "threshold": 0.9,
+      "status": "needs_review",
+      "below_threshold": true,
+      "reasons": [
+        "handwritten_form_requires_review",
+        "tesseract_handwriting_not_validated",
+        "confidence_below_threshold"
+      ],
+      "source": {
+        "page": 1,
+        "line": 6,
+        "text": "Father's Name: Arun Demo",
+        "candidate_text": "Arun Demo",
+        "method": "label_same_line",
+        "bbox": [
+          47,
+          284,
+          368,
+          302
+        ],
+        "ocr_confidence": 0.931,
+        "lines": [
+          {
+            "page": 1,
+            "line": 6,
+            "text": "Father's Name: Arun Demo",
+            "bbox": [
+              47,
+              284,
+              368,
+              302
+            ],
+            "ocr_confidence": 0.931
+          }
+        ]
+      }
+    },
+    {
+      "source_file": "fatca_annexure_form.png",
+      "document_type": "fatca_annexure_form",
+      "field": "place_of_birth",
+      "value": "Pune",
+      "confidence": 0.65,
+      "threshold": 0.9,
+      "status": "needs_review",
+      "below_threshold": true,
+      "reasons": [
+        "handwritten_form_requires_review",
+        "tesseract_handwriting_not_validated",
+        "confidence_below_threshold"
+      ],
+      "source": {
+        "page": 1,
+        "line": 7,
+        "text": "Place of Birth: Pune",
+        "candidate_text": "Pune",
+        "method": "label_same_line",
+        "bbox": [
+          47,
+          323,
+          279,
+          341
+        ],
+        "ocr_confidence": 0.968,
+        "lines": [
+          {
+            "page": 1,
+            "line": 7,
+            "text": "Place of Birth: Pune",
+            "bbox": [
+              47,
+              323,
+              279,
+              341
+            ],
+            "ocr_confidence": 0.968
+          }
+        ]
+      }
+    },
+    {
+      "source_file": "fatca_annexure_form.png",
+      "document_type": "fatca_annexure_form",
+      "field": "nationality",
+      "value": "Indian",
+      "confidence": 0.72,
+      "threshold": 0.9,
+      "status": "needs_review",
+      "below_threshold": true,
+      "reasons": [
+        "handwritten_form_requires_review",
+        "tesseract_handwriting_not_validated",
+        "confidence_below_threshold"
+      ],
+      "source": {
+        "page": 1,
+        "line": 8,
+        "text": "Nationality: Indian",
+        "candidate_text": "Indian",
+        "method": "label_same_line",
+        "bbox": [
+          47,
+          362,
+          261,
+          385
+        ],
+        "ocr_confidence": 0.963,
+        "lines": [
+          {
+            "page": 1,
+            "line": 8,
+            "text": "Nationality: Indian",
+            "bbox": [
+              47,
+              362,
+              261,
+              385
+            ],
+            "ocr_confidence": 0.963
+          }
+        ]
+      }
+    },
+    {
+      "source_file": "benefit_illustration_declaration.png",
+      "document_type": "benefit_illustration_declaration",
+      "field": "application_number",
+      "value": "0000054321",
+      "confidence": 0.72,
+      "threshold": 0.9,
+      "status": "needs_review",
+      "below_threshold": true,
+      "reasons": [
+        "identifier_format_not_verified",
+        "handwritten_form_requires_review",
+        "tesseract_handwriting_not_validated",
+        "confidence_below_threshold"
+      ],
+      "source": {
+        "page": 1,
+        "line": 4,
+        "text": "Application Number: 0000054321",
+        "candidate_text": "0000054321",
+        "method": "label_same_line",
+        "bbox": [
+          45,
+          206,
+          449,
+          229
+        ],
+        "ocr_confidence": 0.955,
+        "lines": [
+          {
+            "page": 1,
+            "line": 4,
+            "text": "Application Number: 0000054321",
+            "bbox": [
+              45,
+              206,
+              449,
+              229
+            ],
+            "ocr_confidence": 0.955
+          }
+        ]
+      }
+    },
+    {
+      "source_file": "benefit_illustration_declaration.png",
+      "document_type": "benefit_illustration_declaration",
+      "field": "policyholder_name",
+      "value": "Ananya Demo",
+      "confidence": 0.72,
+      "threshold": 0.9,
+      "status": "needs_review",
+      "below_threshold": true,
+      "reasons": [
+        "handwritten_form_requires_review",
+        "tesseract_handwriting_not_validated",
+        "confidence_below_threshold"
+      ],
+      "source": {
+        "page": 1,
+        "line": 5,
+        "text": "Policyholder Name: Ananya Demo",
+        "candidate_text": "Ananya Demo",
+        "method": "label_same_line",
+        "bbox": [
+          47,
+          245,
+          452,
+          268
+        ],
+        "ocr_confidence": 0.892,
+        "lines": [
+          {
+            "page": 1,
+            "line": 5,
+            "text": "Policyholder Name: Ananya Demo",
+            "bbox": [
+              47,
+              245,
+              452,
+              268
+            ],
+            "ocr_confidence": 0.892
+          }
+        ]
+      }
+    },
+    {
+      "source_file": "benefit_illustration_declaration.png",
+      "document_type": "benefit_illustration_declaration",
+      "field": "date",
+      "value": "2026-03-19",
+      "confidence": 0.65,
+      "threshold": 0.9,
+      "status": "needs_review",
+      "below_threshold": true,
+      "reasons": [
+        "handwritten_form_requires_review",
+        "tesseract_handwriting_not_validated",
+        "confidence_below_threshold"
+      ],
+      "source": {
+        "page": 1,
+        "line": 6,
+        "text": "Date: 19/03/2026",
+        "candidate_text": "19/03/2026",
+        "method": "label_same_line",
+        "bbox": [
+          47,
+          284,
+          255,
+          304
+        ],
+        "ocr_confidence": 0.964,
+        "lines": [
+          {
+            "page": 1,
+            "line": 6,
+            "text": "Date: 19/03/2026",
+            "bbox": [
+              47,
+              284,
+              255,
+              304
+            ],
+            "ocr_confidence": 0.964
+          }
+        ]
+      }
+    },
+    {
+      "source_file": "benefit_illustration_declaration.png",
+      "document_type": "benefit_illustration_declaration",
+      "field": "place",
+      "value": "Pune",
+      "confidence": 0.65,
+      "threshold": 0.9,
+      "status": "needs_review",
+      "below_threshold": true,
+      "reasons": [
+        "handwritten_form_requires_review",
+        "tesseract_handwriting_not_validated",
+        "confidence_below_threshold"
+      ],
+      "source": {
+        "page": 1,
+        "line": 7,
+        "text": "Place: Pune",
+        "candidate_text": "Pune",
+        "method": "label_same_line",
+        "bbox": [
+          47,
+          323,
+          183,
+          341
+        ],
+        "ocr_confidence": 0.961,
+        "lines": [
+          {
+            "page": 1,
+            "line": 7,
+            "text": "Place: Pune",
+            "bbox": [
+              47,
+              323,
+              183,
+              341
+            ],
+            "ocr_confidence": 0.961
+          }
+        ]
+      }
+    },
+    {
+      "source_file": "moral_hazard_questionnaire.png",
+      "document_type": "moral_hazard_questionnaire",
+      "field": "application_number",
+      "value": "0000054321",
+      "confidence": 0.72,
+      "threshold": 0.9,
+      "status": "needs_review",
+      "below_threshold": true,
+      "reasons": [
+        "identifier_format_not_verified",
+        "handwritten_form_requires_review",
+        "tesseract_handwriting_not_validated",
+        "confidence_below_threshold"
+      ],
+      "source": {
+        "page": 1,
+        "line": 4,
+        "text": "Application Number: 0000054321",
+        "candidate_text": "0000054321",
+        "method": "label_same_line",
+        "bbox": [
+          45,
+          206,
+          449,
+          229
+        ],
+        "ocr_confidence": 0.955,
+        "lines": [
+          {
+            "page": 1,
+            "line": 4,
+            "text": "Application Number: 0000054321",
+            "bbox": [
+              45,
+              206,
+              449,
+              229
+            ],
+            "ocr_confidence": 0.955
+          }
+        ]
+      }
+    },
+    {
+      "source_file": "moral_hazard_questionnaire.png",
+      "document_type": "moral_hazard_questionnaire",
+      "field": "name_of_life_assured",
+      "value": "Ananya Demo",
+      "confidence": 0.72,
+      "threshold": 0.9,
+      "status": "needs_review",
+      "below_threshold": true,
+      "reasons": [
+        "handwritten_form_requires_review",
+        "tesseract_handwriting_not_validated",
+        "confidence_below_threshold"
+      ],
+      "source": {
+        "page": 1,
+        "line": 5,
+        "text": "Name of Life Assured: Ananya Demo",
+        "candidate_text": "Ananya Demo",
+        "method": "label_same_line",
+        "bbox": [
+          47,
+          245,
+          485,
+          268
+        ],
+        "ocr_confidence": 0.956,
+        "lines": [
+          {
+            "page": 1,
+            "line": 5,
+            "text": "Name of Life Assured: Ananya Demo",
+            "bbox": [
+              47,
+              245,
+              485,
+              268
+            ],
+            "ocr_confidence": 0.956
+          }
+        ]
+      }
+    },
+    {
+      "source_file": "moral_hazard_questionnaire.png",
+      "document_type": "moral_hazard_questionnaire",
+      "field": "nominee_relationship",
+      "value": "Spouse",
+      "confidence": 0.72,
+      "threshold": 0.9,
+      "status": "needs_review",
+      "below_threshold": true,
+      "reasons": [
+        "handwritten_form_requires_review",
+        "tesseract_handwriting_not_validated",
+        "confidence_below_threshold"
+      ],
+      "source": {
+        "page": 1,
+        "line": 6,
+        "text": "Nominee Relationship: Spouse",
+        "candidate_text": "Spouse",
+        "method": "label_same_line",
+        "bbox": [
+          47,
+          284,
+          410,
+          307
+        ],
+        "ocr_confidence": 0.963,
+        "lines": [
+          {
+            "page": 1,
+            "line": 6,
+            "text": "Nominee Relationship: Spouse",
+            "bbox": [
+              47,
+              284,
+              410,
+              307
+            ],
+            "ocr_confidence": 0.963
+          }
+        ]
+      }
+    },
+    {
+      "source_file": "moral_hazard_questionnaire.png",
+      "document_type": "moral_hazard_questionnaire",
+      "field": "date",
+      "value": "2026-03-19",
+      "confidence": 0.65,
+      "threshold": 0.9,
+      "status": "needs_review",
+      "below_threshold": true,
+      "reasons": [
+        "handwritten_form_requires_review",
+        "tesseract_handwriting_not_validated",
+        "confidence_below_threshold"
+      ],
+      "source": {
+        "page": 1,
+        "line": 7,
+        "text": "Date: 19/03/2026",
+        "candidate_text": "19/03/2026",
+        "method": "label_same_line",
+        "bbox": [
+          47,
+          323,
+          255,
+          343
+        ],
+        "ocr_confidence": 0.964,
+        "lines": [
+          {
+            "page": 1,
+            "line": 7,
+            "text": "Date: 19/03/2026",
+            "bbox": [
+              47,
+              323,
+              255,
+              343
+            ],
+            "ocr_confidence": 0.964
+          }
+        ]
+      }
+    },
+    {
+      "source_file": "moral_hazard_questionnaire.png",
+      "document_type": "moral_hazard_questionnaire",
+      "field": "place",
+      "value": "Pune",
+      "confidence": 0.65,
+      "threshold": 0.9,
+      "status": "needs_review",
+      "below_threshold": true,
+      "reasons": [
+        "handwritten_form_requires_review",
+        "tesseract_handwriting_not_validated",
+        "confidence_below_threshold"
+      ],
+      "source": {
+        "page": 1,
+        "line": 8,
+        "text": "Place: Pune",
+        "candidate_text": "Pune",
+        "method": "label_same_line",
+        "bbox": [
+          47,
+          362,
+          183,
+          380
+        ],
+        "ocr_confidence": 0.961,
+        "lines": [
+          {
+            "page": 1,
+            "line": 8,
+            "text": "Place: Pune",
+            "bbox": [
+              47,
+              362,
+              183,
+              380
+            ],
+            "ocr_confidence": 0.961
+          }
+        ]
+      }
+    },
+    {
+      "source_file": "multiple_policies_consent_form.png",
+      "document_type": "multiple_policies_consent_form",
+      "field": "proposer_name",
+      "value": "Ananya Demo",
+      "confidence": 0.72,
+      "threshold": 0.9,
+      "status": "needs_review",
+      "below_threshold": true,
+      "reasons": [
+        "handwritten_form_requires_review",
+        "tesseract_handwriting_not_validated",
+        "confidence_below_threshold"
+      ],
+      "source": {
+        "page": 1,
+        "line": 4,
+        "text": "Proposer Name: Ananya Demo",
+        "candidate_text": "Ananya Demo",
+        "method": "label_same_line",
+        "bbox": [
+          47,
+          206,
+          412,
+          229
+        ],
+        "ocr_confidence": 0.96,
+        "lines": [
+          {
+            "page": 1,
+            "line": 4,
+            "text": "Proposer Name: Ananya Demo",
+            "bbox": [
+              47,
+              206,
+              412,
+              229
+            ],
+            "ocr_confidence": 0.96
+          }
+        ]
+      }
+    },
+    {
+      "source_file": "multiple_policies_consent_form.png",
+      "document_type": "multiple_policies_consent_form",
+      "field": "reason_for_multiple_policies",
+      "value": "Family protection",
+      "confidence": 0.72,
+      "threshold": 0.9,
+      "status": "needs_review",
+      "below_threshold": true,
+      "reasons": [
+        "checkbox_selection_requires_visual_review",
+        "handwritten_form_requires_review",
+        "tesseract_handwriting_not_validated",
+        "confidence_below_threshold"
+      ],
+      "source": {
+        "page": 1,
+        "line": 5,
+        "text": "Reason for Multiple Policies: [ ] Investment [x] Family protection [ ] Tax benefit",
+        "candidate_text": "[ ] Investment [x] Family protection [ ] Tax benefit",
+        "method": "label_same_line",
+        "bbox": [
+          47,
+          245,
+          987,
+          268
+        ],
+        "ocr_confidence": 0.875,
+        "lines": [
+          {
+            "page": 1,
+            "line": 5,
+            "text": "Reason for Multiple Policies: [ ] Investment [x] Family protection [ ] Tax benefit",
+            "bbox": [
+              47,
+              245,
+              987,
+              268
+            ],
+            "ocr_confidence": 0.875
+          }
+        ]
+      }
+    },
+    {
+      "source_file": "multiple_policies_consent_form.png",
+      "document_type": "multiple_policies_consent_form",
+      "field": "date",
+      "value": "2026-03-19",
+      "confidence": 0.65,
+      "threshold": 0.9,
+      "status": "needs_review",
+      "below_threshold": true,
+      "reasons": [
+        "handwritten_form_requires_review",
+        "tesseract_handwriting_not_validated",
+        "confidence_below_threshold"
+      ],
+      "source": {
+        "page": 1,
+        "line": 6,
+        "text": "Date: 19/03/2026",
+        "candidate_text": "19/03/2026",
+        "method": "label_same_line",
+        "bbox": [
+          47,
+          284,
+          255,
+          304
+        ],
+        "ocr_confidence": 0.964,
+        "lines": [
+          {
+            "page": 1,
+            "line": 6,
+            "text": "Date: 19/03/2026",
+            "bbox": [
+              47,
+              284,
+              255,
+              304
+            ],
+            "ocr_confidence": 0.964
+          }
+        ]
+      }
+    },
+    {
+      "source_file": "multiple_policies_consent_form.png",
+      "document_type": "multiple_policies_consent_form",
+      "field": "place",
+      "value": "Pune",
+      "confidence": 0.65,
+      "threshold": 0.9,
+      "status": "needs_review",
+      "below_threshold": true,
+      "reasons": [
+        "handwritten_form_requires_review",
+        "tesseract_handwriting_not_validated",
+        "confidence_below_threshold"
+      ],
+      "source": {
+        "page": 1,
+        "line": 7,
+        "text": "Place: Pune",
+        "candidate_text": "Pune",
+        "method": "label_same_line",
+        "bbox": [
+          47,
+          323,
+          183,
+          341
+        ],
+        "ocr_confidence": 0.961,
+        "lines": [
+          {
+            "page": 1,
+            "line": 7,
+            "text": "Place: Pune",
+            "bbox": [
+              47,
+              323,
+              183,
+              341
+            ],
+            "ocr_confidence": 0.961
+          }
+        ]
+      }
+    },
+    {
+      "source_file": "suitability_profiler_declaration.png",
+      "document_type": "suitability_profiler_declaration",
+      "field": "application_number",
+      "value": "0000054321",
+      "confidence": 0.72,
+      "threshold": 0.9,
+      "status": "needs_review",
+      "below_threshold": true,
+      "reasons": [
+        "identifier_format_not_verified",
+        "handwritten_form_requires_review",
+        "tesseract_handwriting_not_validated",
+        "confidence_below_threshold"
+      ],
+      "source": {
+        "page": 1,
+        "line": 4,
+        "text": "Application Number: 0000054321",
+        "candidate_text": "0000054321",
+        "method": "label_same_line",
+        "bbox": [
+          45,
+          206,
+          449,
+          229
+        ],
+        "ocr_confidence": 0.955,
+        "lines": [
+          {
+            "page": 1,
+            "line": 4,
+            "text": "Application Number: 0000054321",
+            "bbox": [
+              45,
+              206,
+              449,
+              229
+            ],
+            "ocr_confidence": 0.955
+          }
+        ]
+      }
+    },
+    {
+      "source_file": "suitability_profiler_declaration.png",
+      "document_type": "suitability_profiler_declaration",
+      "field": "name_of_life_assured",
+      "value": "Ananya Demo",
+      "confidence": 0.72,
+      "threshold": 0.9,
+      "status": "needs_review",
+      "below_threshold": true,
+      "reasons": [
+        "handwritten_form_requires_review",
+        "tesseract_handwriting_not_validated",
+        "confidence_below_threshold"
+      ],
+      "source": {
+        "page": 1,
+        "line": 5,
+        "text": "Name of Life Assured: Ananya Demo",
+        "candidate_text": "Ananya Demo",
+        "method": "label_same_line",
+        "bbox": [
+          47,
+          245,
+          485,
+          268
+        ],
+        "ocr_confidence": 0.956,
+        "lines": [
+          {
+            "page": 1,
+            "line": 5,
+            "text": "Name of Life Assured: Ananya Demo",
+            "bbox": [
+              47,
+              245,
+              485,
+              268
+            ],
+            "ocr_confidence": 0.956
+          }
+        ]
+      }
+    },
+    {
+      "source_file": "suitability_profiler_declaration.png",
+      "document_type": "suitability_profiler_declaration",
+      "field": "name_of_agent_sp",
+      "value": "Rohan Example",
+      "confidence": 0.72,
+      "threshold": 0.9,
+      "status": "needs_review",
+      "below_threshold": true,
+      "reasons": [
+        "handwritten_form_requires_review",
+        "tesseract_handwriting_not_validated",
+        "confidence_below_threshold"
+      ],
+      "source": {
+        "page": 1,
+        "line": 6,
+        "text": "Name of Agent/SP: Rohan Example",
+        "candidate_text": "Rohan Example",
+        "method": "label_same_line",
+        "bbox": [
+          47,
+          284,
+          465,
+          307
+        ],
+        "ocr_confidence": 0.917,
+        "lines": [
+          {
+            "page": 1,
+            "line": 6,
+            "text": "Name of Agent/SP: Rohan Example",
+            "bbox": [
+              47,
+              284,
+              465,
+              307
+            ],
+            "ocr_confidence": 0.917
+          }
+        ]
+      }
+    },
+    {
+      "source_file": "suitability_profiler_declaration.png",
+      "document_type": "suitability_profiler_declaration",
+      "field": "date",
+      "value": "2026-03-19",
+      "confidence": 0.65,
+      "threshold": 0.9,
+      "status": "needs_review",
+      "below_threshold": true,
+      "reasons": [
+        "handwritten_form_requires_review",
+        "tesseract_handwriting_not_validated",
+        "confidence_below_threshold"
+      ],
+      "source": {
+        "page": 1,
+        "line": 7,
+        "text": "Date: 19/03/2026",
+        "candidate_text": "19/03/2026",
+        "method": "label_same_line",
+        "bbox": [
+          47,
+          323,
+          255,
+          343
+        ],
+        "ocr_confidence": 0.964,
+        "lines": [
+          {
+            "page": 1,
+            "line": 7,
+            "text": "Date: 19/03/2026",
+            "bbox": [
+              47,
+              323,
+              255,
+              343
+            ],
+            "ocr_confidence": 0.964
+          }
+        ]
+      }
+    },
+    {
+      "source_file": "suitability_profiler_declaration.png",
+      "document_type": "suitability_profiler_declaration",
+      "field": "place",
+      "value": "Pune",
+      "confidence": 0.65,
+      "threshold": 0.9,
+      "status": "needs_review",
+      "below_threshold": true,
+      "reasons": [
+        "handwritten_form_requires_review",
+        "tesseract_handwriting_not_validated",
+        "confidence_below_threshold"
+      ],
+      "source": {
+        "page": 1,
+        "line": 8,
+        "text": "Place: Pune",
+        "candidate_text": "Pune",
+        "method": "label_same_line",
+        "bbox": [
+          47,
+          362,
+          183,
+          380
+        ],
+        "ocr_confidence": 0.961,
+        "lines": [
+          {
+            "page": 1,
+            "line": 8,
+            "text": "Place: Pune",
+            "bbox": [
+              47,
+              362,
+              183,
+              380
+            ],
+            "ocr_confidence": 0.961
+          }
+        ]
+      }
+    }
+  ],
+  "confidence_kind": "heuristic_quality_score_not_probability",
+  "evaluation_mode": "synthetic_printed_image_ocr",
+  "sample_accuracy": null,
+  "sample_accuracy_note": "No ground-truth answer key or handwriting benchmark has been scored; synthetic transcripts and printed PNGs are engineering checks only"
+}

@@ -1,0 +1,15 @@
+{
+  "pyobjc-core": "12.2.2",
+  "pyobjc-framework-Vision": "12.2.2",
+  "pyobjc-framework-Quartz": "12.2.2",
+  "streamlit": "1.50.0",
+  "pytesseract": "0.3.13",
+  "Pillow": "11.3.0",
+  "python": "3.12.0",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "tesseract": "5.5.2",
+  "private_vision_ui_normalized_matches": 31,
+  "readable_references": 42,
+  "field_targets": 44,
+  "private_document_uploads": 0
+}

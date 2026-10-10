@@ -1,0 +1,41 @@
+{
+  "data": "Public evidence uses fictional KB and synthetic fixtures only",
+  "base_url": "http://127.0.0.1:8501",
+  "pages": [
+    "inventory"
+  ],
+  "checks": [
+    {
+      "check": "Q1 synthetic query execution offline",
+      "result": "passed"
+    },
+    {
+      "check": "Q1 real public search in UI, distinct from built-in wording",
+      "result": "passed"
+    },
+    {
+      "check": "Q1 invalid workbook handling",
+      "result": "passed"
+    }
+  ],
+  "captures": [
+    {
+      "path": "artifacts/screenshots/q1_inventory_execution.png",
+      "description": "Synthetic workbook query: genuine deterministic planner code executed in Linux sandbox",
+      "sha256": "bee986942f654fc9ea681cf9843e5ec51315861635d4c7618704c251695923f8",
+      "captured_utc": "2026-10-08T19:21:22.234011+00:00"
+    },
+    {
+      "path": "artifacts/screenshots/q1_definition_search.png",
+      "description": "Real public definition lookup with retrieved source links; built-in wording is explicitly disclosed",
+      "sha256": "8ce970ff0198de22ee23327e2bbba7cda4059b53b08465832bbad103368d9080",
+      "captured_utc": "2026-10-08T19:21:26.369467+00:00"
+    },
+    {
+      "path": "artifacts/screenshots/q1_invalid_workbook.png",
+      "description": "Genuine invalid workbook rejected with visible load error",
+      "sha256": "81e12a46d407cc98ca1262c0f9c553718fbbb565625aaaa89cf7bc7758855c90",
+      "captured_utc": "2026-10-08T19:21:26.797234+00:00"
+    }
+  ]
+}

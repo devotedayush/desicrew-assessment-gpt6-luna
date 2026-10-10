@@ -1,0 +1,21 @@
+.venv
+.qa-venv
+.git
+__pycache__
+.pytest_cache
+.env
+.env.*
+data/private
+outputs
+artifacts/private
+*.zip
+library-identity.json
+
+.hwr-venv
+
+.got-venv
+
+# Local verification and optional recognition environments
+.venv*
+.vision-venv
+.venv-q3

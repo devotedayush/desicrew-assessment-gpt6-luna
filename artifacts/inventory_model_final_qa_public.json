@@ -1,0 +1,203 @@
+{
+  "created_utc": "2026-10-08T19:12:24.884161+00:00",
+  "model": "Qwen/Qwen2.5-Coder-0.5B-Instruct",
+  "revision": "ea3f2471cf1b1f0db85067f1ef93848e38e88c25",
+  "weights_sha256": "f9523886352217ded3aeeef552b381af79d568c6d49a4b9e423288cea56b0a44",
+  "environment": "Ubuntu 24.04 aarch64, Python 3.12.3, torch 2.6.0+cpu, transformers 4.46.3, safetensors 0.4.5; greedy CPU decoding with two threads",
+  "original_imported_diagnostic": {
+    "independently_verified_queries": 3,
+    "questions": 4,
+    "provenance": "Historical imported documentation; not an unchanged prompt benchmark reproduced in this final-work run"
+  },
+  "fresh_runs": [
+    {
+      "revision": "v1",
+      "description": "Initial expanded rank prompt: whitespace stock selector errors and descending ranking failed.",
+      "live_local_model": true,
+      "deterministic_planner_fallback": false,
+      "questions": 4,
+      "independently_verified_queries": 2,
+      "model_written_summaries": 2,
+      "deterministic_structured_summaries": 0,
+      "deterministic_summary_fallbacks": 0,
+      "checks": [
+        {
+          "label": "row-count",
+          "query_result_verified": true,
+          "summary_method": "llm-numeric-checked",
+          "model_summary_returned": true,
+          "single_expression_bound_to_result": true,
+          "schema_binding_count": 0,
+          "analysis_validation_status": "not_applicable",
+          "elapsed_seconds": 27.28
+        },
+        {
+          "label": "stock-total",
+          "query_result_verified": false,
+          "summary_method": "not-generated",
+          "model_summary_returned": false,
+          "single_expression_bound_to_result": false,
+          "schema_binding_count": 0,
+          "analysis_validation_status": "not_applicable",
+          "elapsed_seconds": 40.5
+        },
+        {
+          "label": "value-total",
+          "query_result_verified": true,
+          "summary_method": "llm-numeric-checked",
+          "model_summary_returned": true,
+          "single_expression_bound_to_result": true,
+          "schema_binding_count": 0,
+          "analysis_validation_status": "not_applicable",
+          "elapsed_seconds": 32.35
+        },
+        {
+          "label": "lowest-stock",
+          "query_result_verified": false,
+          "summary_method": "not-generated",
+          "model_summary_returned": false,
+          "single_expression_bound_to_result": false,
+          "schema_binding_count": 0,
+          "analysis_validation_status": "not_applicable",
+          "elapsed_seconds": 41.43
+        }
+      ]
+    },
+    {
+      "revision": "v2",
+      "description": "Unscoped local-server ranking reminder: ranking passed, but rank instructions contaminated scalar requests.",
+      "live_local_model": true,
+      "deterministic_planner_fallback": false,
+      "questions": 4,
+      "independently_verified_queries": 1,
+      "model_written_summaries": 0,
+      "deterministic_structured_summaries": 4,
+      "deterministic_summary_fallbacks": 0,
+      "checks": [
+        {
+          "label": "row-count",
+          "query_result_verified": false,
+          "summary_method": "deterministic-structured",
+          "model_summary_returned": false,
+          "single_expression_bound_to_result": false,
+          "schema_binding_count": 0,
+          "analysis_validation_status": "not_applicable",
+          "elapsed_seconds": 51.11
+        },
+        {
+          "label": "stock-total",
+          "query_result_verified": false,
+          "summary_method": "deterministic-structured",
+          "model_summary_returned": false,
+          "single_expression_bound_to_result": true,
+          "schema_binding_count": 1,
+          "analysis_validation_status": "not_applicable",
+          "elapsed_seconds": 19.67
+        },
+        {
+          "label": "value-total",
+          "query_result_verified": false,
+          "summary_method": "deterministic-structured",
+          "model_summary_returned": false,
+          "single_expression_bound_to_result": true,
+          "schema_binding_count": 0,
+          "analysis_validation_status": "not_applicable",
+          "elapsed_seconds": 21.34
+        },
+        {
+          "label": "lowest-stock",
+          "query_result_verified": true,
+          "summary_method": "deterministic-structured",
+          "model_summary_returned": false,
+          "single_expression_bound_to_result": true,
+          "schema_binding_count": 1,
+          "analysis_validation_status": "passed",
+          "elapsed_seconds": 24.58
+        }
+      ]
+    },
+    {
+      "revision": "v3",
+      "description": "Final local-server request formatting repeats the exact question/schema and applies rank hints only to that request.",
+      "live_local_model": true,
+      "deterministic_planner_fallback": false,
+      "questions": 4,
+      "independently_verified_queries": 4,
+      "model_written_summaries": 3,
+      "deterministic_structured_summaries": 1,
+      "deterministic_summary_fallbacks": 0,
+      "checks": [
+        {
+          "label": "row-count",
+          "query_result_verified": true,
+          "summary_method": "llm-numeric-checked",
+          "model_summary_returned": true,
+          "single_expression_bound_to_result": true,
+          "schema_binding_count": 0,
+          "analysis_validation_status": "not_applicable",
+          "elapsed_seconds": 46.31
+        },
+        {
+          "label": "stock-total",
+          "query_result_verified": true,
+          "summary_method": "llm-numeric-checked",
+          "model_summary_returned": true,
+          "single_expression_bound_to_result": true,
+          "schema_binding_count": 0,
+          "analysis_validation_status": "not_applicable",
+          "elapsed_seconds": 35.76
+        },
+        {
+          "label": "value-total",
+          "query_result_verified": true,
+          "summary_method": "llm-numeric-checked",
+          "model_summary_returned": true,
+          "single_expression_bound_to_result": true,
+          "schema_binding_count": 0,
+          "analysis_validation_status": "not_applicable",
+          "elapsed_seconds": 30.54
+        },
+        {
+          "label": "lowest-stock",
+          "query_result_verified": true,
+          "summary_method": "deterministic-structured",
+          "model_summary_returned": false,
+          "single_expression_bound_to_result": true,
+          "schema_binding_count": 1,
+          "analysis_validation_status": "passed",
+          "elapsed_seconds": 28.77
+        }
+      ]
+    }
+  ],
+  "final_revision_evaluation": {
+    "status": "PASS",
+    "questions": 4,
+    "independently_verified_queries": 4,
+    "model_written_grounded_numeric_summaries": 3,
+    "deterministic_structured_ranking_summaries": 1,
+    "deterministic_summary_fallbacks": 0,
+    "deterministic_planner_fallback": false,
+    "genuine_code_generation_requests": 5,
+    "genuine_summary_requests": 3,
+    "record_count_correction": "First model completion contained malformed JSON; its one permitted model correction succeeded.",
+    "format_normalization": "All four accepted model computations were single bare expressions, mechanically assigned to result. The ranked query also received one unambiguous whitespace-only stock-column binding. Neither sorting direction nor calculation was rewritten.",
+    "manual_summary_review": "Three scalar summaries described the checked record count, recorded stock and recorded USD value accurately. Structured ranking wording came directly from the executed fields."
+  },
+  "automated_inventory_and_sandbox_regressions": {
+    "passed": 67,
+    "elapsed_seconds": 20.52,
+    "os_execution": "linux-seccomp"
+  },
+  "final_full_suite": {
+    "passed": 223,
+    "warnings": 5,
+    "elapsed_seconds": 22.63,
+    "provenance": "Verified by the parent on Linux after all current code changes"
+  },
+  "optional_model_dependencies": "pip check: no broken requirements found",
+  "live_definition_search": "PASS: canonical public reorder-point lookup returned three Wikipedia sources; no workbook rows sent",
+  "strict_synthetic_model_ui": "PASS reported by the parent: genuine df.shape[0] execution returned scalar 8, matching the independent synthetic workbook count, with a checked model-written numeric summary",
+  "privacy": "Raw prompts, workbook records, executed private values and generated private summaries remain local and are excluded from this aggregate report",
+  "limitations": "Four diagnostics are a small sample, not calibrated accuracy or a general semantic guarantee. Earlier prompt failures remain disclosed. The tiny model is wording-sensitive, can emit malformed JSON, and needed one correction. Column binding and deterministic structured wording are disclosed separately from real generation. Ranking validation covers only its documented narrow scope."
+}

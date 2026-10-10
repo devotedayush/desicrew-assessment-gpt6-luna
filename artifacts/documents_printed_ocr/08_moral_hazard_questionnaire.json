@@ -1,0 +1,257 @@
+{
+  "source_file": "moral_hazard_questionnaire.png",
+  "document_type": "moral_hazard_questionnaire",
+  "document_type_label": "Moral Hazard Questionnaire",
+  "classification_confidence": 0.97,
+  "classification_source": "content_rules",
+  "classification_evidence": [
+    {
+      "document_type": "moral_hazard_questionnaire",
+      "score": 7,
+      "matched_rules": [
+        "\\bm?oral hazard\\b",
+        "\\bquestionnaire\\b"
+      ]
+    },
+    {
+      "document_type": "aadhaar_card",
+      "score": 0,
+      "matched_rules": []
+    },
+    {
+      "document_type": "pan_card",
+      "score": 0,
+      "matched_rules": []
+    }
+  ],
+  "handwritten": true,
+  "fields": {
+    "application_number": {
+      "value": "0000054321",
+      "confidence": 0.72,
+      "status": "needs_review",
+      "source": {
+        "page": 1,
+        "line": 4,
+        "text": "Application Number: 0000054321",
+        "candidate_text": "0000054321",
+        "method": "label_same_line",
+        "bbox": [
+          45,
+          206,
+          449,
+          229
+        ],
+        "ocr_confidence": 0.955,
+        "lines": [
+          {
+            "page": 1,
+            "line": 4,
+            "text": "Application Number: 0000054321",
+            "bbox": [
+              45,
+              206,
+              449,
+              229
+            ],
+            "ocr_confidence": 0.955
+          }
+        ]
+      },
+      "validation_issues": [
+        "identifier_format_not_verified",
+        "handwritten_form_requires_review",
+        "tesseract_handwriting_not_validated"
+      ],
+      "needs_review": true
+    },
+    "name_of_life_assured": {
+      "value": "Ananya Demo",
+      "confidence": 0.72,
+      "status": "needs_review",
+      "source": {
+        "page": 1,
+        "line": 5,
+        "text": "Name of Life Assured: Ananya Demo",
+        "candidate_text": "Ananya Demo",
+        "method": "label_same_line",
+        "bbox": [
+          47,
+          245,
+          485,
+          268
+        ],
+        "ocr_confidence": 0.956,
+        "lines": [
+          {
+            "page": 1,
+            "line": 5,
+            "text": "Name of Life Assured: Ananya Demo",
+            "bbox": [
+              47,
+              245,
+              485,
+              268
+            ],
+            "ocr_confidence": 0.956
+          }
+        ]
+      },
+      "validation_issues": [
+        "handwritten_form_requires_review",
+        "tesseract_handwriting_not_validated"
+      ],
+      "needs_review": true
+    },
+    "nominee_relationship": {
+      "value": "Spouse",
+      "confidence": 0.72,
+      "status": "needs_review",
+      "source": {
+        "page": 1,
+        "line": 6,
+        "text": "Nominee Relationship: Spouse",
+        "candidate_text": "Spouse",
+        "method": "label_same_line",
+        "bbox": [
+          47,
+          284,
+          410,
+          307
+        ],
+        "ocr_confidence": 0.963,
+        "lines": [
+          {
+            "page": 1,
+            "line": 6,
+            "text": "Nominee Relationship: Spouse",
+            "bbox": [
+              47,
+              284,
+              410,
+              307
+            ],
+            "ocr_confidence": 0.963
+          }
+        ]
+      },
+      "validation_issues": [
+        "handwritten_form_requires_review",
+        "tesseract_handwriting_not_validated"
+      ],
+      "needs_review": true
+    },
+    "date": {
+      "value": "2026-03-19",
+      "confidence": 0.65,
+      "status": "needs_review",
+      "source": {
+        "page": 1,
+        "line": 7,
+        "text": "Date: 19/03/2026",
+        "candidate_text": "19/03/2026",
+        "method": "label_same_line",
+        "bbox": [
+          47,
+          323,
+          255,
+          343
+        ],
+        "ocr_confidence": 0.964,
+        "lines": [
+          {
+            "page": 1,
+            "line": 7,
+            "text": "Date: 19/03/2026",
+            "bbox": [
+              47,
+              323,
+              255,
+              343
+            ],
+            "ocr_confidence": 0.964
+          }
+        ]
+      },
+      "validation_issues": [
+        "handwritten_form_requires_review",
+        "tesseract_handwriting_not_validated"
+      ],
+      "needs_review": true
+    },
+    "place": {
+      "value": "Pune",
+      "confidence": 0.65,
+      "status": "needs_review",
+      "source": {
+        "page": 1,
+        "line": 8,
+        "text": "Place: Pune",
+        "candidate_text": "Pune",
+        "method": "label_same_line",
+        "bbox": [
+          47,
+          362,
+          183,
+          380
+        ],
+        "ocr_confidence": 0.961,
+        "lines": [
+          {
+            "page": 1,
+            "line": 8,
+            "text": "Place: Pune",
+            "bbox": [
+              47,
+              362,
+              183,
+              380
+            ],
+            "ocr_confidence": 0.961
+          }
+        ]
+      },
+      "validation_issues": [
+        "handwritten_form_requires_review",
+        "tesseract_handwriting_not_validated"
+      ],
+      "needs_review": true
+    }
+  },
+  "review_threshold": 0.9,
+  "confidence_kind": "heuristic_quality_score_not_probability",
+  "needs_review": true,
+  "review_reasons": [
+    "application_number:needs_review",
+    "name_of_life_assured:needs_review",
+    "nominee_relationship:needs_review",
+    "date:needs_review",
+    "place:needs_review"
+  ],
+  "ocr": {
+    "engine": "local_tesseract",
+    "language": "eng",
+    "pages": 1,
+    "is_image_ocr": true,
+    "mean_word_confidence": 0.958,
+    "warnings": [
+      "English Tesseract baseline is not a validated handwriting recognizer"
+    ],
+    "passes": [
+      {
+        "page": 1,
+        "psm": 6,
+        "mean_word_confidence": 0.957,
+        "word_count": 36,
+        "selected": false
+      },
+      {
+        "page": 1,
+        "psm": 11,
+        "mean_word_confidence": 0.958,
+        "word_count": 36,
+        "selected": true
+      }
+    ]
+  }
+}

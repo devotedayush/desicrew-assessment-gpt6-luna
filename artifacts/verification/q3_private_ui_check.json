@@ -1,0 +1,19 @@
+{
+  "actual_private_ui": "PASS",
+  "documents": 10,
+  "fields": 44,
+  "all_flagged": true,
+  "mode": "local macOS Vision with inspected regions and pixel checkbox detection",
+  "evaluation_counts": {
+    "targets_checked": 44,
+    "readable_references": 42,
+    "excluded_references": 2,
+    "literal_final_exact_matches": 21,
+    "normalized_final_exact_matches": 31,
+    "correct_raw_candidate_fields": 28,
+    "correct_but_rejected_raw_candidate_fields": 1,
+    "missing_or_null_final_values": 8,
+    "conflicting_final_fields": 7,
+    "incorrect_non_null_final_values": 3
+  }
+}

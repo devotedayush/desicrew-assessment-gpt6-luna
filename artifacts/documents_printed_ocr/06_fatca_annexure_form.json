@@ -1,0 +1,256 @@
+{
+  "source_file": "fatca_annexure_form.png",
+  "document_type": "fatca_annexure_form",
+  "document_type_label": "FATCA Annexure Form",
+  "classification_confidence": 0.962,
+  "classification_source": "content_rules",
+  "classification_evidence": [
+    {
+      "document_type": "fatca_annexure_form",
+      "score": 6,
+      "matched_rules": [
+        "\\bfatca\\b"
+      ]
+    },
+    {
+      "document_type": "aadhaar_card",
+      "score": 0,
+      "matched_rules": []
+    },
+    {
+      "document_type": "pan_card",
+      "score": 0,
+      "matched_rules": []
+    }
+  ],
+  "handwritten": true,
+  "fields": {
+    "policy_number": {
+      "value": "0000012345",
+      "confidence": 0.72,
+      "status": "needs_review",
+      "source": {
+        "page": 1,
+        "line": 4,
+        "text": "Policy Number: 0000012345",
+        "candidate_text": "0000012345",
+        "method": "label_same_line",
+        "bbox": [
+          47,
+          206,
+          384,
+          229
+        ],
+        "ocr_confidence": 0.96,
+        "lines": [
+          {
+            "page": 1,
+            "line": 4,
+            "text": "Policy Number: 0000012345",
+            "bbox": [
+              47,
+              206,
+              384,
+              229
+            ],
+            "ocr_confidence": 0.96
+          }
+        ]
+      },
+      "validation_issues": [
+        "identifier_format_not_verified",
+        "handwritten_form_requires_review",
+        "tesseract_handwriting_not_validated"
+      ],
+      "needs_review": true
+    },
+    "tin_pan": {
+      "value": "DEMPP4321Q",
+      "confidence": 0.65,
+      "status": "needs_review",
+      "source": {
+        "page": 1,
+        "line": 5,
+        "text": "TIN / PAN: DEMPP4321Q",
+        "candidate_text": "DEMPP4321Q",
+        "method": "label_same_line",
+        "bbox": [
+          45,
+          245,
+          333,
+          266
+        ],
+        "ocr_confidence": 0.896,
+        "lines": [
+          {
+            "page": 1,
+            "line": 5,
+            "text": "TIN / PAN: DEMPP4321Q",
+            "bbox": [
+              45,
+              245,
+              333,
+              266
+            ],
+            "ocr_confidence": 0.896
+          }
+        ]
+      },
+      "validation_issues": [
+        "handwritten_form_requires_review",
+        "tesseract_handwriting_not_validated"
+      ],
+      "needs_review": true
+    },
+    "father_name": {
+      "value": "Arun Demo",
+      "confidence": 0.72,
+      "status": "needs_review",
+      "source": {
+        "page": 1,
+        "line": 6,
+        "text": "Father's Name: Arun Demo",
+        "candidate_text": "Arun Demo",
+        "method": "label_same_line",
+        "bbox": [
+          47,
+          284,
+          368,
+          302
+        ],
+        "ocr_confidence": 0.931,
+        "lines": [
+          {
+            "page": 1,
+            "line": 6,
+            "text": "Father's Name: Arun Demo",
+            "bbox": [
+              47,
+              284,
+              368,
+              302
+            ],
+            "ocr_confidence": 0.931
+          }
+        ]
+      },
+      "validation_issues": [
+        "handwritten_form_requires_review",
+        "tesseract_handwriting_not_validated"
+      ],
+      "needs_review": true
+    },
+    "place_of_birth": {
+      "value": "Pune",
+      "confidence": 0.65,
+      "status": "needs_review",
+      "source": {
+        "page": 1,
+        "line": 7,
+        "text": "Place of Birth: Pune",
+        "candidate_text": "Pune",
+        "method": "label_same_line",
+        "bbox": [
+          47,
+          323,
+          279,
+          341
+        ],
+        "ocr_confidence": 0.968,
+        "lines": [
+          {
+            "page": 1,
+            "line": 7,
+            "text": "Place of Birth: Pune",
+            "bbox": [
+              47,
+              323,
+              279,
+              341
+            ],
+            "ocr_confidence": 0.968
+          }
+        ]
+      },
+      "validation_issues": [
+        "handwritten_form_requires_review",
+        "tesseract_handwriting_not_validated"
+      ],
+      "needs_review": true
+    },
+    "nationality": {
+      "value": "Indian",
+      "confidence": 0.72,
+      "status": "needs_review",
+      "source": {
+        "page": 1,
+        "line": 8,
+        "text": "Nationality: Indian",
+        "candidate_text": "Indian",
+        "method": "label_same_line",
+        "bbox": [
+          47,
+          362,
+          261,
+          385
+        ],
+        "ocr_confidence": 0.963,
+        "lines": [
+          {
+            "page": 1,
+            "line": 8,
+            "text": "Nationality: Indian",
+            "bbox": [
+              47,
+              362,
+              261,
+              385
+            ],
+            "ocr_confidence": 0.963
+          }
+        ]
+      },
+      "validation_issues": [
+        "handwritten_form_requires_review",
+        "tesseract_handwriting_not_validated"
+      ],
+      "needs_review": true
+    }
+  },
+  "review_threshold": 0.9,
+  "confidence_kind": "heuristic_quality_score_not_probability",
+  "needs_review": true,
+  "review_reasons": [
+    "policy_number:needs_review",
+    "tin_pan:needs_review",
+    "father_name:needs_review",
+    "place_of_birth:needs_review",
+    "nationality:needs_review"
+  ],
+  "ocr": {
+    "engine": "local_tesseract",
+    "language": "eng",
+    "pages": 1,
+    "is_image_ocr": true,
+    "mean_word_confidence": 0.951,
+    "warnings": [
+      "English Tesseract baseline is not a validated handwriting recognizer"
+    ],
+    "passes": [
+      {
+        "page": 1,
+        "psm": 6,
+        "mean_word_confidence": 0.951,
+        "word_count": 37,
+        "selected": false
+      },
+      {
+        "page": 1,
+        "psm": 11,
+        "mean_word_confidence": 0.951,
+        "word_count": 37,
+        "selected": true
+      }
+    ]
+  }
+}

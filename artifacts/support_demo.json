@@ -1,0 +1,251 @@
+{
+  "product": "MeadowDesk (fictional)",
+  "mode": "offline deterministic extractive",
+  "exchange_count": 12,
+  "session_memory": "One SupportAssistant instance for all exchanges; no replayed canned responses.",
+  "exchanges": [
+    {
+      "turn": 1,
+      "user": "How do I invite teammates?",
+      "assistant": {
+        "answer": "Workspace Owners and Admins can invite members from Settings > Members > Invite.",
+        "citations": [
+          {
+            "document": "01-workspace.md",
+            "section": "Workspace invitations",
+            "quote": "Workspace Owners and Admins can invite members from Settings > Members > Invite."
+          }
+        ],
+        "resolved_question": "How do I invite teammates?",
+        "already_covered": false,
+        "topic": "Workspace invitations",
+        "mode": "extractive",
+        "status": "answered"
+      }
+    },
+    {
+      "turn": 2,
+      "user": "When does the link expire?",
+      "assistant": {
+        "answer": "Invitation links expire after 7 days.",
+        "citations": [
+          {
+            "document": "01-workspace.md",
+            "section": "Workspace invitations",
+            "quote": "Invitation links expire after 7 days."
+          }
+        ],
+        "resolved_question": "When does the link expire? (about workspace invitations)",
+        "already_covered": false,
+        "topic": "Workspace invitations",
+        "mode": "extractive",
+        "status": "answered"
+      }
+    },
+    {
+      "turn": 3,
+      "user": "How do I replace an expired link?",
+      "assistant": {
+        "answer": "To replace an expired invitation link, an Owner or Admin must open Settings > Members and choose Resend invite.",
+        "citations": [
+          {
+            "document": "01-workspace.md",
+            "section": "Workspace invitations",
+            "quote": "To replace an expired invitation link, an Owner or Admin must open Settings > Members and choose Resend invite."
+          }
+        ],
+        "resolved_question": "How do I replace an expired link? (about workspace invitations)",
+        "already_covered": false,
+        "topic": "Workspace invitations",
+        "mode": "extractive",
+        "status": "answered"
+      }
+    },
+    {
+      "turn": 4,
+      "user": "How do I invite teammates?",
+      "assistant": {
+        "answer": "We covered that earlier in this session. Use the earlier answer; tell me which part you need help applying.",
+        "citations": [
+          {
+            "document": "01-workspace.md",
+            "section": "Workspace invitations",
+            "quote": "Workspace Owners and Admins can invite members from Settings > Members > Invite."
+          },
+          {
+            "document": "00-scope.md",
+            "section": "Repeated questions",
+            "quote": "When the requested information has already been given in this session, the assistant should refer the user to the earlier answer instead of repeating the same instructions."
+          }
+        ],
+        "resolved_question": "How do I invite teammates?",
+        "already_covered": true,
+        "topic": "Workspace invitations",
+        "mode": "extractive",
+        "status": "answered"
+      }
+    },
+    {
+      "turn": 5,
+      "user": "How do I cancel my subscription?",
+      "assistant": {
+        "answer": "Only the workspace Owner can cancel a paid subscription from Settings > Billing > Cancel plan.",
+        "citations": [
+          {
+            "document": "02-billing.md",
+            "section": "Cancel a subscription",
+            "quote": "Only the workspace Owner can cancel a paid subscription from Settings > Billing > Cancel plan."
+          }
+        ],
+        "resolved_question": "How do I cancel my subscription?",
+        "already_covered": false,
+        "topic": "Cancel a subscription",
+        "mode": "extractive",
+        "status": "answered"
+      }
+    },
+    {
+      "turn": 6,
+      "user": "When does it take effect?",
+      "assistant": {
+        "answer": "Cancellation takes effect at the end of the current billing period.",
+        "citations": [
+          {
+            "document": "02-billing.md",
+            "section": "Cancel a subscription",
+            "quote": "Cancellation takes effect at the end of the current billing period."
+          }
+        ],
+        "resolved_question": "When does it take effect? (about cancel a subscription)",
+        "already_covered": false,
+        "topic": "Cancel a subscription",
+        "mode": "extractive",
+        "status": "answered"
+      }
+    },
+    {
+      "turn": 7,
+      "user": "Can renewal charges be refunded?",
+      "assistant": {
+        "answer": "Renewal charges are not eligible for refunds under this demo policy.",
+        "citations": [
+          {
+            "document": "02-billing.md",
+            "section": "Refund policy",
+            "quote": "Renewal charges are not eligible for refunds under this demo policy."
+          }
+        ],
+        "resolved_question": "Can renewal charges be refunded?",
+        "already_covered": false,
+        "topic": "Refund policy",
+        "mode": "extractive",
+        "status": "answered"
+      }
+    },
+    {
+      "turn": 8,
+      "user": "Back to invitations: how do I resend an expired link?",
+      "assistant": {
+        "answer": "We covered that earlier in this session. Use the earlier answer; tell me which part you need help applying.",
+        "citations": [
+          {
+            "document": "01-workspace.md",
+            "section": "Workspace invitations",
+            "quote": "To replace an expired invitation link, an Owner or Admin must open Settings > Members and choose Resend invite."
+          },
+          {
+            "document": "00-scope.md",
+            "section": "Repeated questions",
+            "quote": "When the requested information has already been given in this session, the assistant should refer the user to the earlier answer instead of repeating the same instructions."
+          }
+        ],
+        "resolved_question": "Back to invitations: how do I resend an expired link?",
+        "already_covered": true,
+        "topic": "Workspace invitations",
+        "mode": "extractive",
+        "status": "answered"
+      }
+    },
+    {
+      "turn": 9,
+      "user": "How do I export projects?",
+      "assistant": {
+        "answer": "Owners and Admins can export project data from Settings > Data > Export.",
+        "citations": [
+          {
+            "document": "04-data.md",
+            "section": "Export projects",
+            "quote": "Owners and Admins can export project data from Settings > Data > Export."
+          }
+        ],
+        "resolved_question": "How do I export projects?",
+        "already_covered": false,
+        "topic": "Export projects",
+        "mode": "extractive",
+        "status": "answered"
+      }
+    },
+    {
+      "turn": 10,
+      "user": "What does it include?",
+      "assistant": {
+        "answer": "An export is a ZIP file containing project CSV files and uploaded attachments.",
+        "citations": [
+          {
+            "document": "04-data.md",
+            "section": "Export projects",
+            "quote": "An export is a ZIP file containing project CSV files and uploaded attachments."
+          }
+        ],
+        "resolved_question": "What does it include? (about export projects)",
+        "already_covered": false,
+        "topic": "Export projects",
+        "mode": "extractive",
+        "status": "answered"
+      }
+    },
+    {
+      "turn": 11,
+      "user": "Do you support SAML single sign-on?",
+      "assistant": {
+        "answer": "The supplied MeadowDesk documents don't cover that question, so I can't establish an answer. Contact help@meadowdesk.example for this fictional product.",
+        "citations": [
+          {
+            "document": "00-scope.md",
+            "section": "Knowledge boundaries",
+            "quote": "This assistant answers only from the supplied MeadowDesk support documents."
+          },
+          {
+            "document": "00-scope.md",
+            "section": "Knowledge boundaries",
+            "quote": "If those documents do not cover a requested fact, the assistant should say it does not know and ask the user to contact the fictional support address help@meadowdesk.example."
+          }
+        ],
+        "resolved_question": "Do you support SAML single sign-on? (about export projects)",
+        "already_covered": false,
+        "topic": "Export projects",
+        "mode": "extractive",
+        "status": "no_answer"
+      }
+    },
+    {
+      "turn": 12,
+      "user": "What about the other link?",
+      "assistant": {
+        "answer": "Which subject do you mean: Refund policy, Workspace invitations, Export projects?",
+        "citations": [
+          {
+            "document": "00-scope.md",
+            "section": "Conversation clarification",
+            "quote": "If a follow-up could refer to more than one subject, the assistant should ask which subject the user means before answering."
+          }
+        ],
+        "resolved_question": "What about the other link?",
+        "already_covered": false,
+        "topic": "Export projects",
+        "mode": "extractive",
+        "status": "clarification"
+      }
+    }
+  ]
+}

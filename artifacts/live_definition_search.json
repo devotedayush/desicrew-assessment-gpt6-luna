@@ -1,0 +1,15 @@
+{
+  "created_utc": "2026-10-08T18:39:39.325987+00:00",
+  "environment": "Ubuntu 24.04, Python 3.12.3, Lima VZ arm64",
+  "tool": "PublicDefinitionSearch",
+  "canonical_public_query": "reorder point",
+  "result_count": 3,
+  "error": null,
+  "source_urls": [
+    "https://en.wikipedia.org/wiki/Reorder_point",
+    "https://en.wikipedia.org/wiki/Inventory_management_software",
+    "https://en.wikipedia.org/wiki/Safety_stock"
+  ],
+  "data_shared": "Only a canonical public concept; no workbook rows, identifiers or document text",
+  "verification": "Observed genuine Linux network lookup; model and sandbox not involved"
+}

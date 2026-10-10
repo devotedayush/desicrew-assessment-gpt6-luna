@@ -1,0 +1,176 @@
+{
+  "data": "synthetic only; not supplied assessment workbook",
+  "model": "none; deterministic planner",
+  "search": "disabled",
+  "exchanges": [
+    {
+      "question": "How many products are there?",
+      "response": {
+        "answer": "Worksheet 'Inventory' has this many inventory records (rows): 8.",
+        "code": "df = sheets['Inventory']\nresult = len(df)",
+        "raw_model_code": "",
+        "code_normalized": false,
+        "summary_mode": "deterministic-demo",
+        "model_summary_rejected": false,
+        "result": {
+          "type": "scalar",
+          "value": 8,
+          "truncated": false,
+          "complete": true,
+          "truncation_reasons": []
+        },
+        "search_sources": [],
+        "mode": "synthetic-demo",
+        "warnings": [
+          "Deterministic synthetic demo mode: no LLM is configured. Results use uploaded data, but language understanding is limited to explicit templates."
+        ]
+      }
+    },
+    {
+      "question": "What is total stock quantity?",
+      "response": {
+        "answer": "Total stock quantity: 294.",
+        "code": "df = sheets['Inventory']\nresult = pd.to_numeric(df['Stock'], errors='coerce').sum(min_count=1)",
+        "raw_model_code": "",
+        "code_normalized": false,
+        "summary_mode": "deterministic-demo",
+        "model_summary_rejected": false,
+        "result": {
+          "type": "scalar",
+          "value": 294,
+          "truncated": false,
+          "complete": true,
+          "truncation_reasons": []
+        },
+        "search_sources": [],
+        "mode": "synthetic-demo",
+        "warnings": [
+          "Deterministic synthetic demo mode: no LLM is configured. Results use uploaded data, but language understanding is limited to explicit templates."
+        ]
+      }
+    },
+    {
+      "question": "What is total inventory value?",
+      "response": {
+        "answer": "Inventory value (stock quantity \u00d7 unit price, in the workbook's currency): 62490.",
+        "code": "df = sheets['Inventory']\nresult = (pd.to_numeric(df['Stock'], errors='coerce') * pd.to_numeric(df['Unit_Price'], errors='coerce')).sum(min_count=1)",
+        "raw_model_code": "",
+        "code_normalized": false,
+        "summary_mode": "deterministic-demo",
+        "model_summary_rejected": false,
+        "result": {
+          "type": "scalar",
+          "value": 62490,
+          "truncated": false,
+          "complete": true,
+          "truncation_reasons": []
+        },
+        "search_sources": [],
+        "mode": "synthetic-demo",
+        "warnings": [
+          "Deterministic synthetic demo mode: no LLM is configured. Results use uploaded data, but language understanding is limited to explicit templates."
+        ]
+      }
+    },
+    {
+      "question": "Which products are below reorder level?",
+      "response": {
+        "answer": "Items with stock strictly below the workbook's reorder threshold. row_label: 1, SKU: DEMO-102, Product: Pen set, Category: Stationery, Stock: 18, Unit_Price: 80, Reorder_Level: 25, Warehouse: North; row_label: 2, SKU: DEMO-103, Product: Desk lamp, Category: Electronics, Stock: 8, Unit_Price: 950, Reorder_Level: 10, Warehouse: South; row_label: 5, SKU: DEMO-106, Product: Backpack, Category: Accessories, Stock: 6, Unit_Price: 1200, Reorder_Level: 12, Warehouse: South; row_label: 6, SKU: DEMO-107, Product: Planner, Category: Stationery, Stock: 0, Unit_Price: 220, Reorder_Level: 10, Warehouse: North.",
+        "code": "df = sheets['Inventory']\nresult = df[pd.to_numeric(df['Stock'], errors='coerce') < pd.to_numeric(df['Reorder_Level'], errors='coerce')]",
+        "raw_model_code": "",
+        "code_normalized": false,
+        "summary_mode": "deterministic-demo",
+        "model_summary_rejected": false,
+        "result": {
+          "type": "table",
+          "columns": [
+            "row_label",
+            "SKU",
+            "Product",
+            "Category",
+            "Stock",
+            "Unit_Price",
+            "Reorder_Level",
+            "Warehouse"
+          ],
+          "rows": [
+            {
+              "row_label": 1,
+              "SKU": "DEMO-102",
+              "Product": "Pen set",
+              "Category": "Stationery",
+              "Stock": 18,
+              "Unit_Price": 80,
+              "Reorder_Level": 25,
+              "Warehouse": "North"
+            },
+            {
+              "row_label": 2,
+              "SKU": "DEMO-103",
+              "Product": "Desk lamp",
+              "Category": "Electronics",
+              "Stock": 8,
+              "Unit_Price": 950,
+              "Reorder_Level": 10,
+              "Warehouse": "South"
+            },
+            {
+              "row_label": 5,
+              "SKU": "DEMO-106",
+              "Product": "Backpack",
+              "Category": "Accessories",
+              "Stock": 6,
+              "Unit_Price": 1200,
+              "Reorder_Level": 12,
+              "Warehouse": "South"
+            },
+            {
+              "row_label": 6,
+              "SKU": "DEMO-107",
+              "Product": "Planner",
+              "Category": "Stationery",
+              "Stock": 0,
+              "Unit_Price": 220,
+              "Reorder_Level": 10,
+              "Warehouse": "North"
+            }
+          ],
+          "row_count": 4,
+          "truncated": false,
+          "complete": true,
+          "truncation_reasons": []
+        },
+        "search_sources": [],
+        "mode": "synthetic-demo",
+        "warnings": [
+          "Deterministic synthetic demo mode: no LLM is configured. Results use uploaded data, but language understanding is limited to explicit templates.",
+          "Public definition search is not configured; no live web context was retrieved."
+        ]
+      }
+    },
+    {
+      "question": "What is inventory turnover?",
+      "response": {
+        "answer": "Inventory turnover measures how frequently inventory is sold or used over a period; a common formula is cost of goods sold divided by average inventory value.",
+        "code": "",
+        "raw_model_code": "",
+        "code_normalized": false,
+        "summary_mode": "built-in-context",
+        "model_summary_rejected": false,
+        "result": {
+          "type": "context",
+          "terms": [
+            "inventory turnover"
+          ]
+        },
+        "search_sources": [],
+        "mode": "synthetic-demo",
+        "warnings": [
+          "Deterministic synthetic demo mode: no LLM is configured. Results use uploaded data, but language understanding is limited to explicit templates.",
+          "Public definition search is not configured; no live web context was retrieved.",
+          "The definition is built-in general context, not a cited live-search conclusion."
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,420 @@
+{
+  "historical_snapshot": true,
+  "historical_snapshot_note": "Imported earlier-checkout visual-reference diagnostic (41 readable, 3 excluded); not the current ten-image evaluation. See artifacts/q3_evaluation_summary.json and docs/Q3_LOCAL_EVALUATION.md.",
+  "purpose": "independent_visual_reference_diagnostic_not_official_answer_key",
+  "accuracy_claim": false,
+  "reference_method": "Independent actual-pixel inspection before reading automatic outputs; ambiguous references excluded; no reference value used to fill extraction output",
+  "normalization": "Field separator/underline characters at outer edges are removed as in the extractor. Dates: unambiguous four-digit dates to ISO; no guessed centuries. Amounts: currency/grouping formatting only. Identifiers/MRZ: whitespace and case only, no character repair. Names: whitespace and case only. Addresses: whitespace/case/commas only. Literal exact matches also reported separately.",
+  "caveat": "Correct readable extraction does not establish an identifier's validity/authenticity. A correct raw candidate may remain rejected because source format, checksum, ambiguity or conflicting OCR evidence requires review.",
+  "configurations": {
+    "tesseract_whole_page": {
+      "counts": {
+        "targets_checked": 44,
+        "readable_references": 41,
+        "excluded_references": 3,
+        "literal_final_exact_matches": 6,
+        "normalized_final_exact_matches": 13,
+        "correct_raw_candidate_fields": 16,
+        "correct_but_rejected_raw_candidate_fields": 3,
+        "missing_or_null_final_values": 26,
+        "conflicting_final_fields": 4,
+        "incorrect_non_null_final_values": 2
+      },
+      "groups": {
+        "printed": {
+          "targets_checked": 16,
+          "readable_references": 16,
+          "excluded_references": 0,
+          "literal_final_exact_matches": 5,
+          "normalized_final_exact_matches": 12,
+          "correct_raw_candidate_fields": 15,
+          "correct_but_rejected_raw_candidate_fields": 3,
+          "missing_or_null_final_values": 4,
+          "conflicting_final_fields": 3,
+          "incorrect_non_null_final_values": 0
+        },
+        "handwritten": {
+          "targets_checked": 28,
+          "readable_references": 25,
+          "excluded_references": 3,
+          "literal_final_exact_matches": 1,
+          "normalized_final_exact_matches": 1,
+          "correct_raw_candidate_fields": 1,
+          "correct_but_rejected_raw_candidate_fields": 0,
+          "missing_or_null_final_values": 22,
+          "conflicting_final_fields": 1,
+          "incorrect_non_null_final_values": 2
+        }
+      }
+    },
+    "tesseract_value_regions": {
+      "counts": {
+        "targets_checked": 44,
+        "readable_references": 41,
+        "excluded_references": 3,
+        "literal_final_exact_matches": 7,
+        "normalized_final_exact_matches": 14,
+        "correct_raw_candidate_fields": 18,
+        "correct_but_rejected_raw_candidate_fields": 4,
+        "missing_or_null_final_values": 22,
+        "conflicting_final_fields": 6,
+        "incorrect_non_null_final_values": 5
+      },
+      "groups": {
+        "printed": {
+          "targets_checked": 16,
+          "readable_references": 16,
+          "excluded_references": 0,
+          "literal_final_exact_matches": 5,
+          "normalized_final_exact_matches": 12,
+          "correct_raw_candidate_fields": 16,
+          "correct_but_rejected_raw_candidate_fields": 4,
+          "missing_or_null_final_values": 4,
+          "conflicting_final_fields": 3,
+          "incorrect_non_null_final_values": 0
+        },
+        "handwritten": {
+          "targets_checked": 28,
+          "readable_references": 25,
+          "excluded_references": 3,
+          "literal_final_exact_matches": 2,
+          "normalized_final_exact_matches": 2,
+          "correct_raw_candidate_fields": 2,
+          "correct_but_rejected_raw_candidate_fields": 0,
+          "missing_or_null_final_values": 18,
+          "conflicting_final_fields": 3,
+          "incorrect_non_null_final_values": 5
+        }
+      }
+    },
+    "tesseract_regions_cleanup": {
+      "counts": {
+        "targets_checked": 44,
+        "readable_references": 41,
+        "excluded_references": 3,
+        "literal_final_exact_matches": 7,
+        "normalized_final_exact_matches": 14,
+        "correct_raw_candidate_fields": 18,
+        "correct_but_rejected_raw_candidate_fields": 4,
+        "missing_or_null_final_values": 21,
+        "conflicting_final_fields": 5,
+        "incorrect_non_null_final_values": 6
+      },
+      "groups": {
+        "printed": {
+          "targets_checked": 16,
+          "readable_references": 16,
+          "excluded_references": 0,
+          "literal_final_exact_matches": 5,
+          "normalized_final_exact_matches": 12,
+          "correct_raw_candidate_fields": 16,
+          "correct_but_rejected_raw_candidate_fields": 4,
+          "missing_or_null_final_values": 4,
+          "conflicting_final_fields": 3,
+          "incorrect_non_null_final_values": 0
+        },
+        "handwritten": {
+          "targets_checked": 28,
+          "readable_references": 25,
+          "excluded_references": 3,
+          "literal_final_exact_matches": 2,
+          "normalized_final_exact_matches": 2,
+          "correct_raw_candidate_fields": 2,
+          "correct_but_rejected_raw_candidate_fields": 0,
+          "missing_or_null_final_values": 17,
+          "conflicting_final_fields": 2,
+          "incorrect_non_null_final_values": 6
+        }
+      }
+    },
+    "trocr_small_regions": {
+      "counts": {
+        "targets_checked": 44,
+        "readable_references": 41,
+        "excluded_references": 3,
+        "literal_final_exact_matches": 7,
+        "normalized_final_exact_matches": 14,
+        "correct_raw_candidate_fields": 18,
+        "correct_but_rejected_raw_candidate_fields": 4,
+        "missing_or_null_final_values": 17,
+        "conflicting_final_fields": 7,
+        "incorrect_non_null_final_values": 10
+      },
+      "groups": {
+        "printed": {
+          "targets_checked": 16,
+          "readable_references": 16,
+          "excluded_references": 0,
+          "literal_final_exact_matches": 5,
+          "normalized_final_exact_matches": 12,
+          "correct_raw_candidate_fields": 15,
+          "correct_but_rejected_raw_candidate_fields": 3,
+          "missing_or_null_final_values": 4,
+          "conflicting_final_fields": 3,
+          "incorrect_non_null_final_values": 0
+        },
+        "handwritten": {
+          "targets_checked": 28,
+          "readable_references": 25,
+          "excluded_references": 3,
+          "literal_final_exact_matches": 2,
+          "normalized_final_exact_matches": 2,
+          "correct_raw_candidate_fields": 3,
+          "correct_but_rejected_raw_candidate_fields": 1,
+          "missing_or_null_final_values": 13,
+          "conflicting_final_fields": 4,
+          "incorrect_non_null_final_values": 10
+        }
+      }
+    },
+    "trocr_base_regions": {
+      "counts": {
+        "targets_checked": 44,
+        "readable_references": 41,
+        "excluded_references": 3,
+        "literal_final_exact_matches": 9,
+        "normalized_final_exact_matches": 19,
+        "correct_raw_candidate_fields": 23,
+        "correct_but_rejected_raw_candidate_fields": 4,
+        "missing_or_null_final_values": 14,
+        "conflicting_final_fields": 6,
+        "incorrect_non_null_final_values": 8
+      },
+      "groups": {
+        "printed": {
+          "targets_checked": 16,
+          "readable_references": 16,
+          "excluded_references": 0,
+          "literal_final_exact_matches": 5,
+          "normalized_final_exact_matches": 12,
+          "correct_raw_candidate_fields": 15,
+          "correct_but_rejected_raw_candidate_fields": 3,
+          "missing_or_null_final_values": 4,
+          "conflicting_final_fields": 3,
+          "incorrect_non_null_final_values": 0
+        },
+        "handwritten": {
+          "targets_checked": 28,
+          "readable_references": 25,
+          "excluded_references": 3,
+          "literal_final_exact_matches": 4,
+          "normalized_final_exact_matches": 7,
+          "correct_raw_candidate_fields": 8,
+          "correct_but_rejected_raw_candidate_fields": 1,
+          "missing_or_null_final_values": 10,
+          "conflicting_final_fields": 3,
+          "incorrect_non_null_final_values": 8
+        }
+      }
+    },
+    "recommended_hybrid": {
+      "counts": {
+        "targets_checked": 44,
+        "readable_references": 41,
+        "excluded_references": 3,
+        "literal_final_exact_matches": 9,
+        "normalized_final_exact_matches": 19,
+        "correct_raw_candidate_fields": 24,
+        "correct_but_rejected_raw_candidate_fields": 5,
+        "missing_or_null_final_values": 14,
+        "conflicting_final_fields": 6,
+        "incorrect_non_null_final_values": 8
+      },
+      "groups": {
+        "printed": {
+          "targets_checked": 16,
+          "readable_references": 16,
+          "excluded_references": 0,
+          "literal_final_exact_matches": 5,
+          "normalized_final_exact_matches": 12,
+          "correct_raw_candidate_fields": 16,
+          "correct_but_rejected_raw_candidate_fields": 4,
+          "missing_or_null_final_values": 4,
+          "conflicting_final_fields": 3,
+          "incorrect_non_null_final_values": 0
+        },
+        "handwritten": {
+          "targets_checked": 28,
+          "readable_references": 25,
+          "excluded_references": 3,
+          "literal_final_exact_matches": 4,
+          "normalized_final_exact_matches": 7,
+          "correct_raw_candidate_fields": 8,
+          "correct_but_rejected_raw_candidate_fields": 1,
+          "missing_or_null_final_values": 10,
+          "conflicting_final_fields": 3,
+          "incorrect_non_null_final_values": 8
+        }
+      }
+    },
+    "hybrid_checkbox_pixels": {
+      "counts": {
+        "targets_checked": 44,
+        "readable_references": 41,
+        "excluded_references": 3,
+        "literal_final_exact_matches": 10,
+        "normalized_final_exact_matches": 21,
+        "correct_raw_candidate_fields": 26,
+        "correct_but_rejected_raw_candidate_fields": 5,
+        "missing_or_null_final_values": 12,
+        "conflicting_final_fields": 6,
+        "incorrect_non_null_final_values": 8
+      },
+      "groups": {
+        "printed": {
+          "targets_checked": 16,
+          "readable_references": 16,
+          "excluded_references": 0,
+          "literal_final_exact_matches": 5,
+          "normalized_final_exact_matches": 12,
+          "correct_raw_candidate_fields": 16,
+          "correct_but_rejected_raw_candidate_fields": 4,
+          "missing_or_null_final_values": 4,
+          "conflicting_final_fields": 3,
+          "incorrect_non_null_final_values": 0
+        },
+        "handwritten": {
+          "targets_checked": 28,
+          "readable_references": 25,
+          "excluded_references": 3,
+          "literal_final_exact_matches": 5,
+          "normalized_final_exact_matches": 9,
+          "correct_raw_candidate_fields": 10,
+          "correct_but_rejected_raw_candidate_fields": 1,
+          "missing_or_null_final_values": 8,
+          "conflicting_final_fields": 3,
+          "incorrect_non_null_final_values": 8
+        }
+      }
+    },
+    "delivered_hybrid": {
+      "counts": {
+        "targets_checked": 44,
+        "readable_references": 41,
+        "excluded_references": 3,
+        "literal_final_exact_matches": 10,
+        "normalized_final_exact_matches": 21,
+        "correct_raw_candidate_fields": 26,
+        "correct_but_rejected_raw_candidate_fields": 5,
+        "missing_or_null_final_values": 12,
+        "conflicting_final_fields": 6,
+        "incorrect_non_null_final_values": 8
+      },
+      "groups": {
+        "printed": {
+          "targets_checked": 16,
+          "readable_references": 16,
+          "excluded_references": 0,
+          "literal_final_exact_matches": 5,
+          "normalized_final_exact_matches": 12,
+          "correct_raw_candidate_fields": 16,
+          "correct_but_rejected_raw_candidate_fields": 4,
+          "missing_or_null_final_values": 4,
+          "conflicting_final_fields": 3,
+          "incorrect_non_null_final_values": 0
+        },
+        "handwritten": {
+          "targets_checked": 28,
+          "readable_references": 25,
+          "excluded_references": 3,
+          "literal_final_exact_matches": 5,
+          "normalized_final_exact_matches": 9,
+          "correct_raw_candidate_fields": 10,
+          "correct_but_rejected_raw_candidate_fields": 1,
+          "missing_or_null_final_values": 8,
+          "conflicting_final_fields": 3,
+          "incorrect_non_null_final_values": 8
+        }
+      }
+    },
+    "printed_localization_refinements": {
+      "counts": {
+        "targets_checked": 44,
+        "readable_references": 41,
+        "excluded_references": 3,
+        "literal_final_exact_matches": 12,
+        "normalized_final_exact_matches": 24,
+        "correct_raw_candidate_fields": 26,
+        "correct_but_rejected_raw_candidate_fields": 2,
+        "missing_or_null_final_values": 9,
+        "conflicting_final_fields": 6,
+        "incorrect_non_null_final_values": 8
+      },
+      "groups": {
+        "printed": {
+          "targets_checked": 16,
+          "readable_references": 16,
+          "excluded_references": 0,
+          "literal_final_exact_matches": 7,
+          "normalized_final_exact_matches": 15,
+          "correct_raw_candidate_fields": 16,
+          "correct_but_rejected_raw_candidate_fields": 1,
+          "missing_or_null_final_values": 1,
+          "conflicting_final_fields": 3,
+          "incorrect_non_null_final_values": 0
+        },
+        "handwritten": {
+          "targets_checked": 28,
+          "readable_references": 25,
+          "excluded_references": 3,
+          "literal_final_exact_matches": 5,
+          "normalized_final_exact_matches": 9,
+          "correct_raw_candidate_fields": 10,
+          "correct_but_rejected_raw_candidate_fields": 1,
+          "missing_or_null_final_values": 8,
+          "conflicting_final_fields": 3,
+          "incorrect_non_null_final_values": 8
+        }
+      }
+    },
+    "completed_got_integrated": {
+      "counts": {
+        "targets_checked": 44,
+        "readable_references": 41,
+        "excluded_references": 3,
+        "literal_final_exact_matches": 17,
+        "normalized_final_exact_matches": 27,
+        "correct_raw_candidate_fields": 31,
+        "correct_but_rejected_raw_candidate_fields": 4,
+        "missing_or_null_final_values": 9,
+        "conflicting_final_fields": 6,
+        "incorrect_non_null_final_values": 5
+      },
+      "groups": {
+        "printed": {
+          "targets_checked": 16,
+          "readable_references": 16,
+          "excluded_references": 0,
+          "literal_final_exact_matches": 7,
+          "normalized_final_exact_matches": 15,
+          "correct_raw_candidate_fields": 16,
+          "correct_but_rejected_raw_candidate_fields": 1,
+          "missing_or_null_final_values": 1,
+          "conflicting_final_fields": 3,
+          "incorrect_non_null_final_values": 0
+        },
+        "handwritten": {
+          "targets_checked": 28,
+          "readable_references": 25,
+          "excluded_references": 3,
+          "literal_final_exact_matches": 10,
+          "normalized_final_exact_matches": 12,
+          "correct_raw_candidate_fields": 15,
+          "correct_but_rejected_raw_candidate_fields": 3,
+          "missing_or_null_final_values": 8,
+          "conflicting_final_fields": 3,
+          "incorrect_non_null_final_values": 5
+        }
+      }
+    }
+  },
+  "latest_completed_configuration": "completed_got_integrated",
+  "all_44_fields_require_review": true,
+  "got_integration_resources": {
+    "canonical_handwritten_crops": 26,
+    "wall_seconds": 250.3,
+    "peak_supervised_rss_mb": 4047.4,
+    "memory_limit_mb": 4096,
+    "hard_wall_limit_seconds": 600
+  }
+}

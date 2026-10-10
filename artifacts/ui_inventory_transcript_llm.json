@@ -1,0 +1,41 @@
+[
+  {
+    "question": "How many rows are in worksheet Inventory?",
+    "response": {
+      "answer": "There are 8 rows in the worksheet named \"Inventory\".",
+      "code": "result = (df.shape[0]\n)",
+      "raw_model_code": "df.shape[0]",
+      "code_normalized": true,
+      "schema_bindings_normalized": [],
+      "summary_mode": "llm-numeric-checked",
+      "model_summary_rejected": false,
+      "analysis_validation": {
+        "status": "not_applicable",
+        "check": "individual-stock-ranking",
+        "rejected": false,
+        "reason": "No explicit individual-item lowest/highest ranking was requested."
+      },
+      "analysis_validation_attempts": [
+        {
+          "status": "not_applicable",
+          "check": "individual-stock-ranking",
+          "rejected": false,
+          "reason": "No explicit individual-item lowest/highest ranking was requested."
+        }
+      ],
+      "result": {
+        "type": "scalar",
+        "value": 8,
+        "truncated": false,
+        "complete": true,
+        "truncation_reasons": []
+      },
+      "search_sources": [],
+      "mode": "llm",
+      "warnings": [
+        "The model returned a single bare expression. It was bound to result without changing the computation, then passed through the unchanged sandbox checks.",
+        "A non-generic search term was blocked to protect workbook data."
+      ]
+    }
+  }
+]

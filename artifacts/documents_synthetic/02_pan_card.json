@@ -1,0 +1,143 @@
+{
+  "source_file": "pan_card.txt",
+  "document_type": "pan_card",
+  "document_type_label": "PAN Card",
+  "classification_confidence": 0.915,
+  "classification_source": "content_rules",
+  "classification_evidence": [
+    {
+      "document_type": "pan_card",
+      "score": 5,
+      "matched_rules": [
+        "\\bpan card\\b"
+      ]
+    },
+    {
+      "document_type": "aadhaar_card",
+      "score": 0,
+      "matched_rules": []
+    },
+    {
+      "document_type": "driving_licence",
+      "score": 0,
+      "matched_rules": []
+    }
+  ],
+  "handwritten": false,
+  "fields": {
+    "pan_number": {
+      "value": "DEMPP4321Q",
+      "confidence": 0.96,
+      "status": "accepted",
+      "source": {
+        "page": 1,
+        "line": 5,
+        "text": "PAN Number: DEMPP4321Q",
+        "candidate_text": "DEMPP4321Q",
+        "method": "label_same_line",
+        "bbox": null,
+        "ocr_confidence": 1.0,
+        "lines": [
+          {
+            "page": 1,
+            "line": 5,
+            "text": "PAN Number: DEMPP4321Q",
+            "bbox": null,
+            "ocr_confidence": 1.0
+          }
+        ]
+      },
+      "validation_issues": [],
+      "needs_review": false
+    },
+    "full_name": {
+      "value": "Ananya Demo",
+      "confidence": 0.96,
+      "status": "accepted",
+      "source": {
+        "page": 1,
+        "line": 6,
+        "text": "Full Name: Ananya Demo",
+        "candidate_text": "Ananya Demo",
+        "method": "label_same_line",
+        "bbox": null,
+        "ocr_confidence": 1.0,
+        "lines": [
+          {
+            "page": 1,
+            "line": 6,
+            "text": "Full Name: Ananya Demo",
+            "bbox": null,
+            "ocr_confidence": 1.0
+          }
+        ]
+      },
+      "validation_issues": [],
+      "needs_review": false
+    },
+    "father_name": {
+      "value": "Arun Demo",
+      "confidence": 0.96,
+      "status": "accepted",
+      "source": {
+        "page": 1,
+        "line": 7,
+        "text": "Father's Name: Arun Demo",
+        "candidate_text": "Arun Demo",
+        "method": "label_same_line",
+        "bbox": null,
+        "ocr_confidence": 1.0,
+        "lines": [
+          {
+            "page": 1,
+            "line": 7,
+            "text": "Father's Name: Arun Demo",
+            "bbox": null,
+            "ocr_confidence": 1.0
+          }
+        ]
+      },
+      "validation_issues": [],
+      "needs_review": false
+    },
+    "date_of_birth": {
+      "value": "1994-03-19",
+      "confidence": 0.96,
+      "status": "accepted",
+      "source": {
+        "page": 1,
+        "line": 8,
+        "text": "Date of Birth: 19/03/1994",
+        "candidate_text": "19/03/1994",
+        "method": "label_same_line",
+        "bbox": null,
+        "ocr_confidence": 1.0,
+        "lines": [
+          {
+            "page": 1,
+            "line": 8,
+            "text": "Date of Birth: 19/03/1994",
+            "bbox": null,
+            "ocr_confidence": 1.0
+          }
+        ]
+      },
+      "validation_issues": [],
+      "needs_review": false
+    }
+  },
+  "review_threshold": 0.9,
+  "confidence_kind": "heuristic_quality_score_not_probability",
+  "needs_review": false,
+  "review_reasons": [],
+  "ocr": {
+    "engine": "provided_text",
+    "pages": 1,
+    "mean_word_confidence": 1.0,
+    "is_image_ocr": false,
+    "warnings": [
+      "Text-input tests do not measure image OCR or handwriting accuracy"
+    ],
+    "passes": []
+  }
+}

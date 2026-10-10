@@ -1,0 +1,27 @@
+{
+  "source_folder": "/Users/ayushmansingh/Downloads/desicrew-assessment (submitted original)",
+  "model": "gpt-6-luna",
+  "scope": "Existing LLM calls in Q1/Q2 only",
+  "modified_original_files": [
+    "README.md",
+    ".env.example",
+    "desicrew/ui.py",
+    "desicrew/llm.py"
+  ],
+  "q3_core_files_byte_identical": true,
+  "q3_page_unchanged": true,
+  "live_api_test": "PASS; supplied key used only for temporary tests, removed afterward",
+  "transport_tests": "7 mocked tests passed; not live model evidence",
+  "historical_artifacts": "Copied unchanged; do not represent GPT-6 Luna results",
+  "focused_verification": {
+    "passed": 40,
+    "deselected": 1,
+    "deselected_reason": "Q1 query execution requires original Linux seccomp environment; host is macOS",
+    "sidebar_key_entry": "PASS; synthetic key plus explicit enable toggle, no network call",
+    "dependency_check": "PASS"
+  },
+  "full_audit": "outputs/v1-audit/summary.json",
+  "linux_full_suite": "230 passed, 0 failed",
+  "live_q1": "6/6 checks with GPT-6 Luna and actual Linux sandbox",
+  "live_q2": "12/12 conversation checks with configured GPT-6 Luna"
+}

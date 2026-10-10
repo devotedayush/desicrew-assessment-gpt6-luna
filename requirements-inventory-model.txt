@@ -1,0 +1,6 @@
+# Optional genuine local Q1 inference; install baseline requirements separately.
+# For Linux amd64, install torch from PyTorch's CPU wheel index first.
+# Linux aarch64 uses the CPU-capable PyPI torch wheel; server forces CPU execution.
+torch==2.6.0
+transformers==4.46.3
+safetensors==0.4.5

@@ -1,0 +1,190 @@
+{
+  "source_file": "nach_ecs_mandate.txt",
+  "document_type": "nach_ecs_mandate",
+  "document_type_label": "NACH / ECS Mandate",
+  "classification_confidence": 0.97,
+  "classification_source": "content_rules",
+  "classification_evidence": [
+    {
+      "document_type": "nach_ecs_mandate",
+      "score": 9,
+      "matched_rules": [
+        "\\bnach\\b|\\becs\\b",
+        "\\bmandate\\b",
+        "\\bifsc\\b"
+      ]
+    },
+    {
+      "document_type": "aadhaar_card",
+      "score": 0,
+      "matched_rules": []
+    },
+    {
+      "document_type": "pan_card",
+      "score": 0,
+      "matched_rules": []
+    }
+  ],
+  "handwritten": true,
+  "fields": {
+    "bank_account_number": {
+      "value": "000123456789",
+      "confidence": 0.78,
+      "status": "needs_review",
+      "source": {
+        "page": 1,
+        "line": 5,
+        "text": "Bank Account Number: 000123456789",
+        "candidate_text": "000123456789",
+        "method": "label_same_line",
+        "bbox": null,
+        "ocr_confidence": 1.0,
+        "lines": [
+          {
+            "page": 1,
+            "line": 5,
+            "text": "Bank Account Number: 000123456789",
+            "bbox": null,
+            "ocr_confidence": 1.0
+          }
+        ]
+      },
+      "validation_issues": [
+        "bank_account_not_verified",
+        "handwritten_form_requires_review"
+      ],
+      "needs_review": true
+    },
+    "ifsc_code": {
+      "value": "DEMO0123456",
+      "confidence": 0.78,
+      "status": "needs_review",
+      "source": {
+        "page": 1,
+        "line": 6,
+        "text": "IFSC Code: DEMO0123456",
+        "candidate_text": "DEMO0123456",
+        "method": "label_same_line",
+        "bbox": null,
+        "ocr_confidence": 1.0,
+        "lines": [
+          {
+            "page": 1,
+            "line": 6,
+            "text": "IFSC Code: DEMO0123456",
+            "bbox": null,
+            "ocr_confidence": 1.0
+          }
+        ]
+      },
+      "validation_issues": [
+        "ifsc_directory_not_verified",
+        "handwritten_form_requires_review"
+      ],
+      "needs_review": true
+    },
+    "bank_name": {
+      "value": "Example Bank",
+      "confidence": 0.84,
+      "status": "needs_review",
+      "source": {
+        "page": 1,
+        "line": 7,
+        "text": "Bank Name: Example Bank",
+        "candidate_text": "Example Bank",
+        "method": "label_same_line",
+        "bbox": null,
+        "ocr_confidence": 1.0,
+        "lines": [
+          {
+            "page": 1,
+            "line": 7,
+            "text": "Bank Name: Example Bank",
+            "bbox": null,
+            "ocr_confidence": 1.0
+          }
+        ]
+      },
+      "validation_issues": [
+        "handwritten_form_requires_review"
+      ],
+      "needs_review": true
+    },
+    "amount_figures": {
+      "value": "25000",
+      "confidence": 0.84,
+      "status": "needs_review",
+      "source": {
+        "page": 1,
+        "line": 8,
+        "text": "Amount (figures): 25,000",
+        "candidate_text": "25,000",
+        "method": "label_same_line",
+        "bbox": null,
+        "ocr_confidence": 1.0,
+        "lines": [
+          {
+            "page": 1,
+            "line": 8,
+            "text": "Amount (figures): 25,000",
+            "bbox": null,
+            "ocr_confidence": 1.0
+          }
+        ]
+      },
+      "validation_issues": [
+        "currency_assumed_inr",
+        "handwritten_form_requires_review"
+      ],
+      "needs_review": true
+    },
+    "frequency": {
+      "value": "Monthly",
+      "confidence": 0.82,
+      "status": "needs_review",
+      "source": {
+        "page": 1,
+        "line": 9,
+        "text": "Frequency: [x] Monthly [ ] Quarterly",
+        "candidate_text": "[x] Monthly [ ] Quarterly",
+        "method": "label_same_line",
+        "bbox": null,
+        "ocr_confidence": 1.0,
+        "lines": [
+          {
+            "page": 1,
+            "line": 9,
+            "text": "Frequency: [x] Monthly [ ] Quarterly",
+            "bbox": null,
+            "ocr_confidence": 1.0
+          }
+        ]
+      },
+      "validation_issues": [
+        "checkbox_selection_requires_visual_review",
+        "handwritten_form_requires_review"
+      ],
+      "needs_review": true
+    }
+  },
+  "review_threshold": 0.9,
+  "confidence_kind": "heuristic_quality_score_not_probability",
+  "needs_review": true,
+  "review_reasons": [
+    "bank_account_number:needs_review",
+    "ifsc_code:needs_review",
+    "bank_name:needs_review",
+    "amount_figures:needs_review",
+    "frequency:needs_review"
+  ],
+  "ocr": {
+    "engine": "provided_text",
+    "pages": 1,
+    "mean_word_confidence": 1.0,
+    "is_image_ocr": false,
+    "warnings": [
+      "Text-input tests do not measure image OCR or handwriting accuracy"
+    ],
+    "passes": []
+  }
+}

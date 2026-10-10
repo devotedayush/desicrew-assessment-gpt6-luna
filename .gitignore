@@ -1,0 +1,37 @@
+.venv/
+.qa-venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.env
+.env.*
+!.env.example
+data/private/*
+!data/private/.gitkeep
+outputs/*
+!outputs/.gitkeep
+artifacts/private/
+*.log
+*.pem
+*.key
+*.token
+library-identity.json
+.DS_Store
+
+.hwr-venv/
+
+.got-venv/
+
+# Local verification and optional recognition environments
+.venv*
+.vision-venv
+.venv-q3
+
+# Local private review material and copied submission manifests
+reviewer_outputs/
+review_appendix/
+PACKAGE_MANIFEST.json
+SUBMISSION_MANIFEST.json
+REVIEW_APPENDIX_MANIFEST.json
+START-HERE-REVIEWED.md
+._*

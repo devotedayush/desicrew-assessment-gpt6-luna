@@ -1,0 +1,203 @@
+{
+  "source_file": "driving_licence.png",
+  "document_type": "driving_licence",
+  "document_type_label": "Driving Licence",
+  "classification_confidence": 0.915,
+  "classification_source": "content_rules",
+  "classification_evidence": [
+    {
+      "document_type": "driving_licence",
+      "score": 5,
+      "matched_rules": [
+        "\\bdriving licen[cs]e\\b"
+      ]
+    },
+    {
+      "document_type": "aadhaar_card",
+      "score": 0,
+      "matched_rules": []
+    },
+    {
+      "document_type": "pan_card",
+      "score": 0,
+      "matched_rules": []
+    }
+  ],
+  "handwritten": false,
+  "fields": {
+    "dl_number": {
+      "value": "MH12 2012 0000123",
+      "confidence": 0.88,
+      "status": "needs_review",
+      "source": {
+        "page": 1,
+        "line": 4,
+        "text": "DL Number: MH12 2012 0000123",
+        "candidate_text": "MH12 2012 0000123",
+        "method": "label_same_line",
+        "bbox": [
+          47,
+          206,
+          446,
+          224
+        ],
+        "ocr_confidence": 0.916,
+        "lines": [
+          {
+            "page": 1,
+            "line": 4,
+            "text": "DL Number: MH12 2012 0000123",
+            "bbox": [
+              47,
+              206,
+              446,
+              224
+            ],
+            "ocr_confidence": 0.916
+          }
+        ]
+      },
+      "validation_issues": [
+        "dl_format_jurisdiction_not_verified"
+      ],
+      "needs_review": true
+    },
+    "name": {
+      "value": "Ananya Demo",
+      "confidence": 0.958,
+      "status": "accepted",
+      "source": {
+        "page": 1,
+        "line": 5,
+        "text": "Name: Ananya Demo",
+        "candidate_text": "Ananya Demo",
+        "method": "label_same_line",
+        "bbox": [
+          47,
+          245,
+          299,
+          268
+        ],
+        "ocr_confidence": 0.958,
+        "lines": [
+          {
+            "page": 1,
+            "line": 5,
+            "text": "Name: Ananya Demo",
+            "bbox": [
+              47,
+              245,
+              299,
+              268
+            ],
+            "ocr_confidence": 0.958
+          }
+        ]
+      },
+      "validation_issues": [],
+      "needs_review": false
+    },
+    "date_of_issue": {
+      "value": "2012-03-19",
+      "confidence": 0.96,
+      "status": "accepted",
+      "source": {
+        "page": 1,
+        "line": 6,
+        "text": "Date of Issue: 19/03/2012",
+        "candidate_text": "19/03/2012",
+        "method": "label_same_line",
+        "bbox": [
+          47,
+          284,
+          355,
+          304
+        ],
+        "ocr_confidence": 0.961,
+        "lines": [
+          {
+            "page": 1,
+            "line": 6,
+            "text": "Date of Issue: 19/03/2012",
+            "bbox": [
+              47,
+              284,
+              355,
+              304
+            ],
+            "ocr_confidence": 0.961
+          }
+        ]
+      },
+      "validation_issues": [],
+      "needs_review": false
+    },
+    "valid_till_date": {
+      "value": "2032-03-19",
+      "confidence": 0.96,
+      "status": "accepted",
+      "source": {
+        "page": 1,
+        "line": 7,
+        "text": "Valid Till: 19/03/2032",
+        "candidate_text": "19/03/2032",
+        "method": "label_same_line",
+        "bbox": [
+          45,
+          323,
+          296,
+          343
+        ],
+        "ocr_confidence": 0.968,
+        "lines": [
+          {
+            "page": 1,
+            "line": 7,
+            "text": "Valid Till: 19/03/2032",
+            "bbox": [
+              45,
+              323,
+              296,
+              343
+            ],
+            "ocr_confidence": 0.968
+          }
+        ]
+      },
+      "validation_issues": [],
+      "needs_review": false
+    }
+  },
+  "review_threshold": 0.9,
+  "confidence_kind": "heuristic_quality_score_not_probability",
+  "needs_review": true,
+  "review_reasons": [
+    "dl_number:needs_review"
+  ],
+  "ocr": {
+    "engine": "local_tesseract",
+    "language": "eng",
+    "pages": 1,
+    "is_image_ocr": true,
+    "mean_word_confidence": 0.957,
+    "warnings": [
+      "English Tesseract baseline is not a validated handwriting recognizer"
+    ],
+    "passes": [
+      {
+        "page": 1,
+        "psm": 6,
+        "mean_word_confidence": 0.956,
+        "word_count": 34,
+        "selected": false
+      },
+      {
+        "page": 1,
+        "psm": 11,
+        "mean_word_confidence": 0.957,
+        "word_count": 34,
+        "selected": true
+      }
+    ]
+  }
+}

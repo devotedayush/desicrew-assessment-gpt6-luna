@@ -1,0 +1,227 @@
+{
+  "source_file": "aadhaar_card.png",
+  "document_type": "aadhaar_card",
+  "document_type_label": "Aadhaar Card",
+  "classification_confidence": 0.915,
+  "classification_source": "content_rules",
+  "classification_evidence": [
+    {
+      "document_type": "aadhaar_card",
+      "score": 5,
+      "matched_rules": [
+        "\\b(?:aadhaar|aadhar|unique identification authority)\\b"
+      ]
+    },
+    {
+      "document_type": "pan_card",
+      "score": 0,
+      "matched_rules": []
+    },
+    {
+      "document_type": "driving_licence",
+      "score": 0,
+      "matched_rules": []
+    }
+  ],
+  "handwritten": false,
+  "fields": {
+    "aadhaar_number": {
+      "value": "234567890123",
+      "confidence": 0.88,
+      "status": "needs_review",
+      "source": {
+        "page": 1,
+        "line": 4,
+        "text": "Aadhaar Number: 2345 6789 0123",
+        "candidate_text": "2345 6789 0123",
+        "method": "label_same_line",
+        "bbox": [
+          45,
+          206,
+          461,
+          224
+        ],
+        "ocr_confidence": 0.922,
+        "lines": [
+          {
+            "page": 1,
+            "line": 4,
+            "text": "Aadhaar Number: 2345 6789 0123",
+            "bbox": [
+              45,
+              206,
+              461,
+              224
+            ],
+            "ocr_confidence": 0.922
+          }
+        ]
+      },
+      "validation_issues": [
+        "aadhaar_checksum_not_verified"
+      ],
+      "needs_review": true
+    },
+    "full_name": {
+      "value": "Ananya Demo",
+      "confidence": 0.951,
+      "status": "accepted",
+      "source": {
+        "page": 1,
+        "line": 5,
+        "text": "Full Name: Ananya Demo",
+        "candidate_text": "Ananya Demo",
+        "method": "label_same_line",
+        "bbox": [
+          47,
+          245,
+          348,
+          268
+        ],
+        "ocr_confidence": 0.951,
+        "lines": [
+          {
+            "page": 1,
+            "line": 5,
+            "text": "Full Name: Ananya Demo",
+            "bbox": [
+              47,
+              245,
+              348,
+              268
+            ],
+            "ocr_confidence": 0.951
+          }
+        ]
+      },
+      "validation_issues": [],
+      "needs_review": false
+    },
+    "date_of_birth": {
+      "value": "1994-03-19",
+      "confidence": 0.96,
+      "status": "accepted",
+      "source": {
+        "page": 1,
+        "line": 6,
+        "text": "Date of Birth: 19/03/1994",
+        "candidate_text": "19/03/1994",
+        "method": "label_same_line",
+        "bbox": [
+          47,
+          284,
+          351,
+          304
+        ],
+        "ocr_confidence": 0.962,
+        "lines": [
+          {
+            "page": 1,
+            "line": 6,
+            "text": "Date of Birth: 19/03/1994",
+            "bbox": [
+              47,
+              284,
+              351,
+              304
+            ],
+            "ocr_confidence": 0.962
+          }
+        ]
+      },
+      "validation_issues": [],
+      "needs_review": false
+    },
+    "address": {
+      "value": "42 Example Lane, Demonstration Nagar, Pune 411001",
+      "confidence": 0.959,
+      "status": "accepted",
+      "source": {
+        "page": 1,
+        "line": 7,
+        "text": "Address: 42 Example Lane\nDemonstration Nagar\nPune 411001",
+        "candidate_text": "42 Example Lane, Demonstration Nagar, Pune 411001",
+        "method": "label_same_line_multiline",
+        "bbox": [
+          45,
+          323,
+          364,
+          419
+        ],
+        "ocr_confidence": 0.959,
+        "lines": [
+          {
+            "page": 1,
+            "line": 7,
+            "text": "Address: 42 Example Lane",
+            "bbox": [
+              45,
+              323,
+              364,
+              346
+            ],
+            "ocr_confidence": 0.963
+          },
+          {
+            "page": 1,
+            "line": 8,
+            "text": "Demonstration Nagar",
+            "bbox": [
+              47,
+              362,
+              304,
+              385
+            ],
+            "ocr_confidence": 0.959
+          },
+          {
+            "page": 1,
+            "line": 9,
+            "text": "Pune 411001",
+            "bbox": [
+              47,
+              401,
+              201,
+              419
+            ],
+            "ocr_confidence": 0.965
+          }
+        ]
+      },
+      "validation_issues": [],
+      "needs_review": false
+    }
+  },
+  "review_threshold": 0.9,
+  "confidence_kind": "heuristic_quality_score_not_probability",
+  "needs_review": true,
+  "review_reasons": [
+    "aadhaar_number:needs_review"
+  ],
+  "ocr": {
+    "engine": "local_tesseract",
+    "language": "eng",
+    "pages": 1,
+    "is_image_ocr": true,
+    "mean_word_confidence": 0.957,
+    "warnings": [
+      "English Tesseract baseline is not a validated handwriting recognizer"
+    ],
+    "passes": [
+      {
+        "page": 1,
+        "psm": 6,
+        "mean_word_confidence": 0.957,
+        "word_count": 40,
+        "selected": false
+      },
+      {
+        "page": 1,
+        "psm": 11,
+        "mean_word_confidence": 0.957,
+        "word_count": 40,
+        "selected": true
+      }
+    ]
+  }
+}

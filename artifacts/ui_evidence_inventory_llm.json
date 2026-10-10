@@ -1,0 +1,31 @@
+{
+  "data": "Public evidence uses fictional KB and synthetic fixtures only",
+  "base_url": "http://127.0.0.1:8501",
+  "pages": [
+    "inventory"
+  ],
+  "checks": [
+    {
+      "check": "Q1 synthetic query execution LLM",
+      "result": "passed"
+    },
+    {
+      "check": "Q1 invalid workbook handling",
+      "result": "passed"
+    }
+  ],
+  "captures": [
+    {
+      "path": "artifacts/screenshots/q1_llm_execution.png",
+      "description": "Synthetic workbook query: genuine local LLM code executed in Linux sandbox",
+      "sha256": "1e6606ef99f152bceafa5e5cd64345366124fae9d7280dd879ef58f72ce5074f",
+      "captured_utc": "2026-10-08T19:08:35.244732+00:00"
+    },
+    {
+      "path": "artifacts/screenshots/q1_invalid_workbook_llm.png",
+      "description": "Genuine invalid workbook rejected with visible load error",
+      "sha256": "f92e8b801c2fd90c8aedd8fe397cc5e061b50884becf0a280cc4684cd0806e7e",
+      "captured_utc": "2026-10-08T19:08:35.686850+00:00"
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "purpose": "independent_visual_reference_diagnostic_not_official_answer_key",
+  "accuracy_claim": false,
+  "reference_method": "Manual inspection of original pixels, including enlarged crops for ambiguous handwriting; some visual references were refined after the first baseline run, but never from model predictions or used to fill extraction output. Unresolved references are excluded.",
+  "normalization": "Field separator/underline characters at outer edges are removed as in the extractor. Dates: unambiguous four-digit dates to ISO; no guessed centuries. Amounts: currency/grouping formatting only. Identifiers/MRZ: whitespace and case only, no character repair. Names: whitespace and case only. Addresses: whitespace/case/commas only. Literal exact matches also reported separately.",
+  "caveat": "Correct readable extraction does not establish an identifier's validity/authenticity. A correct raw candidate may remain rejected because source format, checksum, ambiguity or conflicting OCR evidence requires review.",
+  "configurations": {
+    "portable_tesseract": {
+      "counts": {
+        "targets_checked": 44,
+        "readable_references": 42,
+        "excluded_references": 2,
+        "literal_final_exact_matches": 10,
+        "normalized_final_exact_matches": 18,
+        "correct_raw_candidate_fields": 18,
+        "correct_but_rejected_raw_candidate_fields": 0,
+        "missing_or_null_final_values": 24,
+        "conflicting_final_fields": 4,
+        "incorrect_non_null_final_values": 0
+      },
+      "groups": {
+        "printed": {
+          "targets_checked": 16,
+          "readable_references": 15,
+          "excluded_references": 1,
+          "literal_final_exact_matches": 7,
+          "normalized_final_exact_matches": 15,
+          "correct_raw_candidate_fields": 15,
+          "correct_but_rejected_raw_candidate_fields": 0,
+          "missing_or_null_final_values": 0,
+          "conflicting_final_fields": 3,
+          "incorrect_non_null_final_values": 0
+        },
+        "handwritten": {
+          "targets_checked": 28,
+          "readable_references": 27,
+          "excluded_references": 1,
+          "literal_final_exact_matches": 3,
+          "normalized_final_exact_matches": 3,
+          "correct_raw_candidate_fields": 3,
+          "correct_but_rejected_raw_candidate_fields": 0,
+          "missing_or_null_final_values": 24,
+          "conflicting_final_fields": 1,
+          "incorrect_non_null_final_values": 0
+        }
+      }
+    },
+    "local_macos_vision": {
+      "counts": {
+        "targets_checked": 44,
+        "readable_references": 42,
+        "excluded_references": 2,
+        "literal_final_exact_matches": 21,
+        "normalized_final_exact_matches": 31,
+        "correct_raw_candidate_fields": 28,
+        "correct_but_rejected_raw_candidate_fields": 1,
+        "missing_or_null_final_values": 8,
+        "conflicting_final_fields": 7,
+        "incorrect_non_null_final_values": 3
+      },
+      "groups": {
+        "printed": {
+          "targets_checked": 16,
+          "readable_references": 15,
+          "excluded_references": 1,
+          "literal_final_exact_matches": 7,
+          "normalized_final_exact_matches": 15,
+          "correct_raw_candidate_fields": 15,
+          "correct_but_rejected_raw_candidate_fields": 0,
+          "missing_or_null_final_values": 0,
+          "conflicting_final_fields": 3,
+          "incorrect_non_null_final_values": 0
+        },
+        "handwritten": {
+          "targets_checked": 28,
+          "readable_references": 27,
+          "excluded_references": 1,
+          "literal_final_exact_matches": 14,
+          "normalized_final_exact_matches": 16,
+          "correct_raw_candidate_fields": 13,
+          "correct_but_rejected_raw_candidate_fields": 1,
+          "missing_or_null_final_values": 8,
+          "conflicting_final_fields": 4,
+          "incorrect_non_null_final_values": 3
+        }
+      }
+    },
+    "guarded_local_got": {
+      "counts": {
+        "targets_checked": 44,
+        "readable_references": 42,
+        "excluded_references": 2,
+        "literal_final_exact_matches": 10,
+        "normalized_final_exact_matches": 18,
+        "correct_raw_candidate_fields": 19,
+        "correct_but_rejected_raw_candidate_fields": 1,
+        "missing_or_null_final_values": 23,
+        "conflicting_final_fields": 4,
+        "incorrect_non_null_final_values": 1
+      },
+      "groups": {
+        "printed": {
+          "targets_checked": 16,
+          "readable_references": 15,
+          "excluded_references": 1,
+          "literal_final_exact_matches": 7,
+          "normalized_final_exact_matches": 15,
+          "correct_raw_candidate_fields": 15,
+          "correct_but_rejected_raw_candidate_fields": 0,
+          "missing_or_null_final_values": 0,
+          "conflicting_final_fields": 3,
+          "incorrect_non_null_final_values": 0
+        },
+        "handwritten": {
+          "targets_checked": 28,
+          "readable_references": 27,
+          "excluded_references": 1,
+          "literal_final_exact_matches": 3,
+          "normalized_final_exact_matches": 3,
+          "correct_raw_candidate_fields": 4,
+          "correct_but_rejected_raw_candidate_fields": 1,
+          "missing_or_null_final_values": 23,
+          "conflicting_final_fields": 1,
+          "incorrect_non_null_final_values": 1
+        }
+      }
+    }
+  }
+}

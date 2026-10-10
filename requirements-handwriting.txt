@@ -1,0 +1,8 @@
+# Optional isolated CPU-only local handwriting environment. No hosted OCR/API.
+# CPU wheels are from PyTorch's official wheel registry.
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.6.0+cpu
+transformers==4.46.3
+safetensors==0.4.5
+sentencepiece==0.2.0
+Pillow==11.3.0

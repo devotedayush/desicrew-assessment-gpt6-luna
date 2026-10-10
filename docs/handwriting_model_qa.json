@@ -1,0 +1,146 @@
+{
+  "purpose": "Sanitized real local handwriting diagnostic counts; no private pixels or values",
+  "official_answer_key_used": false,
+  "reference_policy": "17 locally visually readable line references; 1 ambiguous line excluded; case and whitespace normalization only; no character repair",
+  "scope": "18 manually selected line crops across six supplied forms, including diagnostic fragments beyond brief targets; not complete-field accuracy",
+  "recommendation": "Optional review-only evidence. Base recognizes some more lines, but neither checkpoint establishes robust identifier/date extraction; do not auto-accept handwriting.",
+  "observed_failures": [
+    "Box/table rules confused handwritten account and IFSC recognition",
+    "Digits omitted/substituted or converted to words",
+    "Short names/relationships hallucinated or misspelled",
+    "Dates lost separators or became unrelated text",
+    "Noisy place crop confused spelling",
+    "Rule cleanup changed predictions and can damage touching strokes"
+  ],
+  "runs": {
+    "small_raw": {
+      "model_actually_ran": true,
+      "model": "microsoft/trocr-small-handwritten",
+      "model_revision": "b4648cfa171985a6745f37ddd637e98c0da958ac",
+      "device": "cpu",
+      "external_image_uploads": 0,
+      "paid_calls": 0,
+      "crops_evaluated": 18,
+      "source_documents": 6,
+      "visually_readable_references": 17,
+      "excluded_ambiguous_references": 1,
+      "exact_line_matches_case_whitespace_normalized": 1,
+      "aggregate_character_edits": 152,
+      "aggregate_reference_characters": 179,
+      "character_error_rate": 0.8492,
+      "generation_budget_failures": 0,
+      "all_model_results_require_review": true,
+      "elapsed_inference_seconds": 6.933,
+      "evaluation_limitations": [
+        "Small manually selected crop set, not the official answer key",
+        "Visual references can themselves be uncertain; null references excluded",
+        "Repeated names and places reduce diversity",
+        "Line-level metrics do not establish complete field/pipeline accuracy",
+        "IAM-trained English model has domain shift on Indian insurance forms"
+      ]
+    },
+    "small_cleanup": {
+      "model_actually_ran": true,
+      "model": "microsoft/trocr-small-handwritten",
+      "model_revision": "b4648cfa171985a6745f37ddd637e98c0da958ac",
+      "device": "cpu",
+      "preprocessing": "contrast_rule_cleanup",
+      "external_image_uploads": 0,
+      "paid_calls": 0,
+      "crops_evaluated": 18,
+      "source_documents": 6,
+      "visually_readable_references": 17,
+      "excluded_ambiguous_references": 1,
+      "exact_line_matches_case_whitespace_normalized": 4,
+      "aggregate_character_edits": 87,
+      "aggregate_reference_characters": 179,
+      "character_error_rate": 0.486,
+      "generation_budget_failures": 0,
+      "all_model_results_require_review": true,
+      "elapsed_inference_seconds": 6.61,
+      "evaluation_limitations": [
+        "Small manually selected crop set, not the official answer key",
+        "Visual references can themselves be uncertain; null references excluded",
+        "Repeated names and places reduce diversity",
+        "Line-level metrics do not establish complete field/pipeline accuracy",
+        "IAM-trained English model has domain shift on Indian insurance forms"
+      ]
+    },
+    "base_raw": {
+      "model_actually_ran": true,
+      "model": "microsoft/trocr-base-handwritten",
+      "model_revision": "eaacaf452b06415df8f10bb6fad3a4c11e609406",
+      "device": "cpu",
+      "preprocessing": "none",
+      "external_image_uploads": 0,
+      "paid_calls": 0,
+      "crops_evaluated": 18,
+      "source_documents": 6,
+      "visually_readable_references": 17,
+      "excluded_ambiguous_references": 1,
+      "exact_line_matches_case_whitespace_normalized": 5,
+      "aggregate_character_edits": 89,
+      "aggregate_reference_characters": 179,
+      "character_error_rate": 0.4972,
+      "generation_budget_failures": 0,
+      "all_model_results_require_review": true,
+      "elapsed_inference_seconds": 24.769,
+      "evaluation_limitations": [
+        "Small manually selected crop set, not the official answer key",
+        "Visual references can themselves be uncertain; null references excluded",
+        "Repeated names and places reduce diversity",
+        "Line-level metrics do not establish complete field/pipeline accuracy",
+        "IAM-trained English model has domain shift on Indian insurance forms"
+      ]
+    },
+    "base_cleanup": {
+      "model_actually_ran": true,
+      "model": "microsoft/trocr-base-handwritten",
+      "model_revision": "eaacaf452b06415df8f10bb6fad3a4c11e609406",
+      "device": "cpu",
+      "preprocessing": "contrast_rule_cleanup",
+      "external_image_uploads": 0,
+      "paid_calls": 0,
+      "crops_evaluated": 18,
+      "source_documents": 6,
+      "visually_readable_references": 17,
+      "excluded_ambiguous_references": 1,
+      "exact_line_matches_case_whitespace_normalized": 5,
+      "aggregate_character_edits": 87,
+      "aggregate_reference_characters": 179,
+      "character_error_rate": 0.486,
+      "generation_budget_failures": 0,
+      "all_model_results_require_review": true,
+      "elapsed_inference_seconds": 23.578,
+      "evaluation_limitations": [
+        "Small manually selected crop set, not the official answer key",
+        "Visual references can themselves be uncertain; null references excluded",
+        "Repeated names and places reduce diversity",
+        "Line-level metrics do not establish complete field/pipeline accuracy",
+        "IAM-trained English model has domain shift on Indian insurance forms"
+      ]
+    }
+  },
+  "verified_runtime_versions": {
+    "torch": "2.6.0+cpu",
+    "transformers": "4.46.3",
+    "safetensors": "0.4.5",
+    "sentencepiece": "0.2.0",
+    "Pillow": "11.3.0"
+  },
+  "verification": {
+    "focused_adapter_evaluation_tests_passed": 16,
+    "latest_full_source_tests_passed": 158,
+    "final_offline_smoke": true,
+    "download_hash_and_model_identity_verified": true,
+    "deployment_push_or_submission": false
+  },
+  "historical_snapshot": {
+    "status": "imported earlier checkpoint; not rerun or final-source count",
+    "current_reports": [
+      "docs/Q3_LOCAL_EVALUATION.md",
+      "artifacts/q3_evaluation_summary.json",
+      "docs/VERIFICATION.md"
+    ]
+  }
+}

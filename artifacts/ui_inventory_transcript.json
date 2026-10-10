@@ -1,0 +1,33 @@
+[
+  {
+    "question": "How many rows are in worksheet Inventory?",
+    "response": {
+      "answer": "Worksheet 'Inventory' has this many inventory records (rows): 8.",
+      "code": "df = sheets['Inventory']\nresult = len(df)",
+      "raw_model_code": "",
+      "code_normalized": false,
+      "schema_bindings_normalized": [],
+      "summary_mode": "deterministic-demo",
+      "model_summary_rejected": false,
+      "analysis_validation": {
+        "status": "not_applicable",
+        "check": "individual-stock-ranking",
+        "rejected": false,
+        "reason": "No explicit individual-item lowest/highest ranking was requested."
+      },
+      "analysis_validation_attempts": [],
+      "result": {
+        "type": "scalar",
+        "value": 8,
+        "truncated": false,
+        "complete": true,
+        "truncation_reasons": []
+      },
+      "search_sources": [],
+      "mode": "synthetic-demo",
+      "warnings": [
+        "Deterministic synthetic demo mode: no LLM is configured. Results use uploaded data, but language understanding is limited to explicit templates."
+      ]
+    }
+  }
+]

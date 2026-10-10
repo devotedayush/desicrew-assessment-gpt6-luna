@@ -1,0 +1,75 @@
+{
+  "capture_manifest_hash_checks": [
+    {
+      "manifest": "ui_evidence_support_documents.json",
+      "path": "artifacts/screenshots/q2_support_session.png",
+      "sha256_matches": true
+    },
+    {
+      "manifest": "ui_evidence_support_documents.json",
+      "path": "artifacts/screenshots/q2_support_middle.png",
+      "sha256_matches": true
+    },
+    {
+      "manifest": "ui_evidence_support_documents.json",
+      "path": "artifacts/screenshots/q2_support_end.png",
+      "sha256_matches": true
+    },
+    {
+      "manifest": "ui_evidence_support_documents.json",
+      "path": "artifacts/screenshots/q2_out_of_scope.png",
+      "sha256_matches": true
+    },
+    {
+      "manifest": "ui_evidence_support_documents.json",
+      "path": "artifacts/screenshots/q3_synthetic_review.png",
+      "sha256_matches": true
+    },
+    {
+      "manifest": "ui_evidence_support_documents.json",
+      "path": "artifacts/screenshots/q3_synthetic_fields.png",
+      "sha256_matches": true
+    },
+    {
+      "manifest": "ui_evidence_support_documents.json",
+      "path": "artifacts/screenshots/q3_synthetic_image_ocr.png",
+      "sha256_matches": true
+    },
+    {
+      "manifest": "ui_evidence_support_documents.json",
+      "path": "artifacts/screenshots/q3_unreadable_input.png",
+      "sha256_matches": true
+    },
+    {
+      "manifest": "ui_evidence_inventory_llm.json",
+      "path": "artifacts/screenshots/q1_llm_execution.png",
+      "sha256_matches": true
+    },
+    {
+      "manifest": "ui_evidence_inventory_llm.json",
+      "path": "artifacts/screenshots/q1_invalid_workbook_llm.png",
+      "sha256_matches": true
+    },
+    {
+      "manifest": "ui_evidence_inventory.json",
+      "path": "artifacts/screenshots/q1_inventory_execution.png",
+      "sha256_matches": true
+    },
+    {
+      "manifest": "ui_evidence_inventory.json",
+      "path": "artifacts/screenshots/q1_definition_search.png",
+      "sha256_matches": true
+    },
+    {
+      "manifest": "ui_evidence_inventory.json",
+      "path": "artifacts/screenshots/q1_invalid_workbook.png",
+      "sha256_matches": true
+    }
+  ],
+  "retained_prior_failure": {
+    "path": "artifacts/screenshots/q1_llm_failure.png",
+    "sha256": "b95d150829ccc162178e264c9206c9cbc65a5529845e9301f7717342abea88e1",
+    "description": "Earlier genuine model query returned no executed result. It also exposed a null-JSON rendering issue fixed in the final UI. Preserved as historical failure evidence, not a successful query or a current UI error."
+  },
+  "private_data": "Public evidence uses synthetic inventory/image fixtures and a fictional support KB only."
+}

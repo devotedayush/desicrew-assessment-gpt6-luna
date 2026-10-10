@@ -1,0 +1,160 @@
+{
+  "source_file": "benefit_illustration_declaration.txt",
+  "document_type": "benefit_illustration_declaration",
+  "document_type_label": "Benefit Illustration Declaration",
+  "classification_confidence": 0.97,
+  "classification_source": "content_rules",
+  "classification_evidence": [
+    {
+      "document_type": "benefit_illustration_declaration",
+      "score": 7,
+      "matched_rules": [
+        "\\bbenefit illustration\\b",
+        "\\bdeclaration\\b"
+      ]
+    },
+    {
+      "document_type": "suitability_profiler_declaration",
+      "score": 1,
+      "matched_rules": [
+        "\\bdeclaration\\b"
+      ]
+    },
+    {
+      "document_type": "aadhaar_card",
+      "score": 0,
+      "matched_rules": []
+    }
+  ],
+  "handwritten": true,
+  "fields": {
+    "application_number": {
+      "value": "0000054321",
+      "confidence": 0.84,
+      "status": "needs_review",
+      "source": {
+        "page": 1,
+        "line": 5,
+        "text": "Application Number: 0000054321",
+        "candidate_text": "0000054321",
+        "method": "label_same_line",
+        "bbox": null,
+        "ocr_confidence": 1.0,
+        "lines": [
+          {
+            "page": 1,
+            "line": 5,
+            "text": "Application Number: 0000054321",
+            "bbox": null,
+            "ocr_confidence": 1.0
+          }
+        ]
+      },
+      "validation_issues": [
+        "identifier_format_not_verified",
+        "handwritten_form_requires_review"
+      ],
+      "needs_review": true
+    },
+    "policyholder_name": {
+      "value": "Ananya Demo",
+      "confidence": 0.84,
+      "status": "needs_review",
+      "source": {
+        "page": 1,
+        "line": 6,
+        "text": "Policyholder Name: Ananya Demo",
+        "candidate_text": "Ananya Demo",
+        "method": "label_same_line",
+        "bbox": null,
+        "ocr_confidence": 1.0,
+        "lines": [
+          {
+            "page": 1,
+            "line": 6,
+            "text": "Policyholder Name: Ananya Demo",
+            "bbox": null,
+            "ocr_confidence": 1.0
+          }
+        ]
+      },
+      "validation_issues": [
+        "handwritten_form_requires_review"
+      ],
+      "needs_review": true
+    },
+    "date": {
+      "value": "2026-03-19",
+      "confidence": 0.78,
+      "status": "needs_review",
+      "source": {
+        "page": 1,
+        "line": 7,
+        "text": "Date: 19/03/2026",
+        "candidate_text": "19/03/2026",
+        "method": "label_same_line",
+        "bbox": null,
+        "ocr_confidence": 1.0,
+        "lines": [
+          {
+            "page": 1,
+            "line": 7,
+            "text": "Date: 19/03/2026",
+            "bbox": null,
+            "ocr_confidence": 1.0
+          }
+        ]
+      },
+      "validation_issues": [
+        "handwritten_form_requires_review"
+      ],
+      "needs_review": true
+    },
+    "place": {
+      "value": "Pune",
+      "confidence": 0.78,
+      "status": "needs_review",
+      "source": {
+        "page": 1,
+        "line": 8,
+        "text": "Place: Pune",
+        "candidate_text": "Pune",
+        "method": "label_same_line",
+        "bbox": null,
+        "ocr_confidence": 1.0,
+        "lines": [
+          {
+            "page": 1,
+            "line": 8,
+            "text": "Place: Pune",
+            "bbox": null,
+            "ocr_confidence": 1.0
+          }
+        ]
+      },
+      "validation_issues": [
+        "handwritten_form_requires_review"
+      ],
+      "needs_review": true
+    }
+  },
+  "review_threshold": 0.9,
+  "confidence_kind": "heuristic_quality_score_not_probability",
+  "needs_review": true,
+  "review_reasons": [
+    "application_number:needs_review",
+    "policyholder_name:needs_review",
+    "date:needs_review",
+    "place:needs_review"
+  ],
+  "ocr": {
+    "engine": "provided_text",
+    "pages": 1,
+    "mean_word_confidence": 1.0,
+    "is_image_ocr": false,
+    "warnings": [
+      "Text-input tests do not measure image OCR or handwriting accuracy"
+    ],
+    "passes": []
+  }
+}

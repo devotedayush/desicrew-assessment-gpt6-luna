@@ -1,0 +1,9 @@
+SYNTHETIC TEST FIXTURE - ARTIFICIAL PERSON AND VALUES
+NOT A GOVERNMENT DOCUMENT / NOT AN ASSESSMENT SAMPLE
+
+NACH ECS Mandate
+Bank Account Number: 000123456789
+IFSC Code: DEMO0123456
+Bank Name: Example Bank
+Amount (figures): 25,000
+Frequency: [x] Monthly [ ] Quarterly

@@ -1,0 +1,17 @@
+{
+  "public_source_text": "PASS: sensitive visual-reference values excluded; remaining matches are generic nationality/checkbox options or numeric constant coincidences",
+  "public_pngs": "PASS: independent OCR review found only a documented synthetic amount coincidence",
+  "test_fixture_privacy": "Recognized sample names/places were replaced with unrelated synthetic values; production extraction never reads visual references",
+  "allowlist": "Source includes only application, tests, scripts, instructions, synthetic fixtures/outputs, public aggregate reports and genuine synthetic screenshots",
+  "excluded": [
+    "credentials",
+    "virtual environments",
+    "model weights",
+    "supplied workbook and scans",
+    "private visual references",
+    "private crop/generation traces",
+    "interview guide"
+  ],
+  "local_reviewer_exception": "Ten required automatic per-document JSON outputs, batch JSON and review report contain sensitive values and remain in the LOCAL archive only",
+  "command_flags": "README/GOT/capture/package help parsers checked on Linux; historical TrOCR setup is explicitly amd64-only"
+}

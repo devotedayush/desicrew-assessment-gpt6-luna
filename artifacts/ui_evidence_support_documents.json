@@ -1,0 +1,80 @@
+{
+  "data": "Public evidence uses fictional KB and synthetic fixtures only",
+  "base_url": "http://127.0.0.1:8502",
+  "pages": [
+    "support",
+    "documents"
+  ],
+  "checks": [
+    {
+      "check": "Q2 12-exchange replay",
+      "result": "passed"
+    },
+    {
+      "check": "Q2 reset and out-of-scope response",
+      "result": "passed"
+    },
+    {
+      "check": "Q3 synthetic schema coverage",
+      "result": "passed"
+    },
+    {
+      "check": "Q3 image OCR in UI",
+      "result": "passed"
+    },
+    {
+      "check": "Q3 unreadable input review",
+      "result": "passed"
+    }
+  ],
+  "captures": [
+    {
+      "path": "artifacts/screenshots/q2_support_session.png",
+      "description": "Real UI replay: first exchanges of 12 sequential cited turns",
+      "sha256": "323ca9bc6ed00b73deb1090573e7b23f2c3b816f68cf59f9e1d6663c81350c23",
+      "captured_utc": "2026-10-08T19:02:00.774369+00:00"
+    },
+    {
+      "path": "artifacts/screenshots/q2_support_middle.png",
+      "description": "Real UI replay: middle exchanges and topic switches",
+      "sha256": "46172a2ff231f54b55a9d3be46e23e5ac3406ad4194d06909a86e7f169cad7f6",
+      "captured_utc": "2026-10-08T19:02:01.357849+00:00"
+    },
+    {
+      "path": "artifacts/screenshots/q2_support_end.png",
+      "description": "Real UI replay: final exchanges of 12 sequential turns",
+      "sha256": "49e04d1a8850ea23b81083173db4cb9e70fc700d0e597e721f44e9f87c2088c9",
+      "captured_utc": "2026-10-08T19:02:01.720215+00:00"
+    },
+    {
+      "path": "artifacts/screenshots/q2_out_of_scope.png",
+      "description": "Unknown topic handled by cited scope response",
+      "sha256": "53ca8e1300f605d61633e904a04f873644bd618ba32cbae6e15f6f575644f8ca",
+      "captured_utc": "2026-10-08T19:02:02.562102+00:00"
+    },
+    {
+      "path": "artifacts/screenshots/q3_synthetic_review.png",
+      "description": "Ten synthetic text documents, all 44 field targets and review statuses",
+      "sha256": "82cc84e31d1ae9311ea42e909fcea31fb91ae91f2211785c22356005ae590ec9",
+      "captured_utc": "2026-10-08T19:02:04.899481+00:00"
+    },
+    {
+      "path": "artifacts/screenshots/q3_synthetic_fields.png",
+      "description": "Required fields, confidence and provenance for synthetic source",
+      "sha256": "e80900f784185a2680adad6a3db21c3b2a8bb03d8c7393a08f9c23bcd57620ad",
+      "captured_utc": "2026-10-08T19:02:05.403201+00:00"
+    },
+    {
+      "path": "artifacts/screenshots/q3_synthetic_image_ocr.png",
+      "description": "Actual local OCR of synthetic bank mandate image; no supplied private scan",
+      "sha256": "b77ecc59a7c4b9df5bd2c5cbb5746c1801850dce3eef76a94dd9d2995e6cfe38",
+      "captured_utc": "2026-10-08T19:02:08.765976+00:00"
+    },
+    {
+      "path": "artifacts/screenshots/q3_unreadable_input.png",
+      "description": "Genuine unreadable-image failure routed to review without stopping the app",
+      "sha256": "b1d16216ff1bba42031a216c329b689677338598c05e33bb4ad74713aa65a4a0",
+      "captured_utc": "2026-10-08T19:02:10.482947+00:00"
+    }
+  ]
+}

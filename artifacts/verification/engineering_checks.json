@@ -1,0 +1,65 @@
+{
+  "date_local": "2026-10-09",
+  "timezone": "Asia/Kolkata",
+  "environment": {
+    "os": "Ubuntu 24.04 Linux",
+    "architecture": "aarch64",
+    "python": "3.12.3",
+    "tesseract": "5.3.4",
+    "libseccomp": "2.5.5",
+    "host": "macOS Lima VZ VM"
+  },
+  "original_source": {
+    "command": "python -m pytest -q",
+    "result": "PASS",
+    "passed": 205,
+    "warnings": 5,
+    "seconds": 23.77
+  },
+  "revised_source": {
+    "command": "python -m pytest -q",
+    "result": "PASS",
+    "passed": 217,
+    "warnings": 5,
+    "seconds": 29.26
+  },
+  "dependencies": {
+    "command": "pip check",
+    "result": "PASS",
+    "output": "No broken requirements found."
+  },
+  "compile": {
+    "command": "python -m compileall -q app.py desicrew scripts tests",
+    "result": "PASS"
+  },
+  "sandbox": {
+    "result": "PASS",
+    "method": "unchanged Linux seccomp runner; no macOS bypass or insecure fallback"
+  },
+  "warnings": "Five PyMuPDF SWIG deprecation warnings; no test failures",
+  "docker": "UNVERIFIED: Linux VM was used; Docker build/runtime was not executed",
+  "clean_final_zip": {
+    "status": "See adjacent FINAL_VERIFICATION.json",
+    "method": "Fresh extraction of the final archive, full Linux test suite and ZIP/manifest verification",
+    "note": "External final proof avoids an archive checksum circular dependency"
+  },
+  "revised_source_final": {
+    "command": "python -m pytest -q",
+    "result": "PASS",
+    "passed": 223,
+    "warnings": 5,
+    "seconds": 22.63,
+    "environment": "Fresh isolated Linux Python3.12 environment installed from requirements-lock.txt"
+  },
+  "original_source_archive_sha256": "c7dd857b115379e33eca9c720cb41d8ce77568f15b8d2fe842936e7030174c84",
+  "clean_extracted_snapshot": {
+    "result": "PASS",
+    "tests_passed": 223,
+    "warnings": 5,
+    "seconds": 34.11,
+    "pip_check": "PASS",
+    "compile": "PASS",
+    "cli_demos": "PASS: inventory4queries, support12/12, documents10/44",
+    "live_browser": "PASS: inventory8rows, support12exchanges, documents44fields"
+  }
+}
